@@ -1,0 +1,66 @@
+<div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle"
+     tabindex="-1"></div>
+
+<div class="popup bg__tire" id="request-popup" data-popup>
+    <div class="popup-content " tabindex="0">
+        <button class="popup-close flexCenter" aria-label="Закрыть попап"
+                data-close-popup>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M10.244 0.243822C10.5695 -0.0814088 11.0974 -0.0815461 11.4227 0.243822C11.748 0.569199 11.7479 1.09712 11.4227 1.42253L7.01159 5.83269L11.4227 10.2438C11.748 10.5692 11.7479 11.0971 11.4227 11.4225C11.0973 11.7479 10.5695 11.7479 10.244 11.4225L5.83288 7.0114L1.42272 11.4225C1.09732 11.7479 0.569458 11.7479 0.244013 11.4225C-0.0814241 11.0971 -0.0814241 10.5693 0.244013 10.2438L4.65417 5.83269L0.244013 1.42253C-0.0814241 1.0971 -0.0814241 0.569259 0.244013 0.243822C0.569466 -0.0814088 1.09736 -0.0815461 1.42272 0.243822L5.83288 4.65398L10.244 0.243822Z" fill="#999DA6"/>
+            </svg>
+        </button>
+
+        <form class="popup-form flexColumn">
+            <div class="popup-form__top flexColumn">
+                <h4 data-popup-get-title></h4>
+
+
+                <span class="line__icon flexBox">
+                            <svg width="299" height="12" viewBox="0 0 299 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0H123L113 12H0L10 0Z" fill="#FE6B29"></path>
+                                <path d="M157 0H200L190 12H147L157 0Z" fill="#FE6B29"></path>
+                                <path d="M222 0H258L248 12H212L222 0Z" fill="#FE6B29"></path>
+                                <path d="M280 0H299L289 12H270L280 0Z" fill="#FE6B29"></path>
+                            </svg>
+                        </span>
+
+                <p class="t1">
+                    Поможем в выборе тура и формата мероприятия, уточним по стоимости и датам, пришлём презентацию
+                </p>
+            </div>
+
+            <div class="popup-form__inputs">
+                <div class="custom-form__field flexColumn bg__color-mustache">
+                    <label class="color__smoke t-caption" for="name">имя*</label>
+                    <input class="bg__color-mustache t2" type="text" id="name" name="name" placeholder="Ваше имя" required="">
+                </div>
+
+                <div class="custom-form__field flexColumn bg__color-mustache">
+                    <label class="color__smoke t-caption" for="phone">телефон*</label>
+                    <input class="bg__color-mustache t2" type="text" id="phone" name="name" placeholder="+7 (___) ___-__-__" required="" data-phone-mask="">
+                </div>
+
+                <div class="custom-form__field popup-form__field-long flexColumn bg__color-mustache">
+                    <label class="color__smoke t-caption" for="email">КОММЕНТАРИЙ</label>
+                    <input class="bg__color-mustache t2" type="email" id="email" name="email" placeholder="Введите e-mail" required=""></input>
+                </div>
+
+                <div class="custom-form__field popup-form__field-long flexColumn bg__color-mustache">
+                    <label class="color__smoke t-caption" for="comment">КОММЕНТАРИЙ</label>
+                    <textarea class="custom-form__textarea bg__color-mustache t2" id="comment" name="comment" placeholder="ВАШ КОММЕНТАРИЙ"></textarea>
+                </div>
+            </div>
+
+            <div class="popup-form__bottom flexBox">
+                <button type="submit" class="popup__send-btn custom-form__button btn-custom bg__brand btn-skew-left">
+                    <span class="h6 btn-skew-left-content">отправить</span>
+                </button>
+
+                <p class="t-caption color__smoke">
+                    НАЖИМАЯ КНОПКУ, ВЫ СОГЛАШАЕТЕСЬ
+                    <a href="#" class="form__privacy-link color__dust">С ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ И ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

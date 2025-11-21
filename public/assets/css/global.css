@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --color-white:#FFFFFF;
+
+    --color-black: #1c1c1c;
+
+    --color-gray-darck: #34404c;
+    --color-gray: #696969;
+    --color-gray-25: #757575;
+    --color-light_gray: #adaeae;
+    --color-gray-30: #ccd0d3;
+
+    --color-primary-5: #fd0000;
+    --color-primary: #f32933;
+    --color-primary-25: #fc4952;
+
+    --color-blue-5: #081d32;
+    --color-blue: #2c81d7;
+    --color-blue-light: #f0f3f4;
+    --color-blue-light-25: #f1f3f4;
+
+    --color-green: #60d569;
+
+}
+
+.width-container{
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+body {
+    color: var(--color-black);
+    background-color: var(--color-gray-darck);
+    font-family: '';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.page-section {
+
+}
+
+a {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+    color: var(--color-white);
+    transition: color 300ms, background-color 300ms;
+    white-space: nowrap;
+}
+
+.btn-custom {
+
+}
+
+img {
+    width: 100%;
+}
+
+.resetListStyle {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.textUppercase {
+    text-transform: uppercase;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mw-fitContent {
+    display: flex;
+    max-width: fit-content;
+}
+
+.blockBox{
+    display: block;
+}
+
+.flexBox {
+    display: flex;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexAlignCenter {
+    display: flex;
+    align-items: center;
+}
+
+.flex__row__column {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexJustifyBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+::placeholder {
+    color: var(--color-dust);
+    opacity: 1;
+    text-transform: uppercase;
+}
+
+:-ms-input-placeholder {
+    color: var(--color-dust);
+    text-transform: uppercase;
+}
+
+::-ms-input-placeholder {
+    color: var(--color-dust);
+    text-transform: uppercase;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+[data-container]{
+    display: none;
+}
+
+[data-container].active{
+    display: block;
+}
+
+
+@media (max-width: 992px) {
+    .width-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .page-section {
+
+    }
+
+    .flex__row__column {
+        flex-direction: column;
+    }
+
+    .btn-custom{
+        height: 38px;
+    }
+
+}
+
+
+
+@media (hover: hover) {
+    button:hover {
+        cursor: pointer;
+    }
+
+}
+
