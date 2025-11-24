@@ -2,8 +2,49 @@
 
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
 
 
 }
 
+@media (max-width: 992px) {
+    /*breadcrumbs*/
+    .breadcrumbs{
+        gap: 12px;
+        margin: 16px 0 24px;
+    }
+    .breadcrumbs li a{
+        color: var(--color-gray-30);
+    }
+
+    .breadcrumbs li a:after{
+        content: "/";
+        margin-left: 12px;
+    }
+
+    .breadcrumbs li:last-child{
+        color: var(--color-white);
+    }
+
+    /*END breadcrumbs*/
+
+
+
+    .error-page-section{
+        aspect-ratio: 300/480;
+        background-image: url("/assets/images/main/404-img-mob.webp");
+        padding: 16px;
+    }
+
+    .error-page-content{
+        gap: 16px;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+
+}

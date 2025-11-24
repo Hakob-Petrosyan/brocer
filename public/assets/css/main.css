@@ -1,0 +1,37 @@
+/*breadcrumbs*/
+.breadcrumbs{
+    gap: 12px;
+    margin: 21px 0;
+}
+.breadcrumbs li a{
+    color: var(--color-gray-30);
+}
+
+.breadcrumbs li a:after{
+    content: "/";
+    margin-left: 12px;
+}
+
+.breadcrumbs li:last-child{
+    color: var(--color-white);
+}
+
+/*END breadcrumbs*/
+
+
+
+
+/*error page*/
+.error-page-section{
+    aspect-ratio: 1200/670;
+    background-image: url("/assets/images/main/404-img.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 64px 48px;
+    border-radius: 16px;
+}
+
+.error-page-content{
+    gap: 32px;
+}
+/*END error page*/

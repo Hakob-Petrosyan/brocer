@@ -1,17 +1,109 @@
-/*font Oswald*/
 @font-face {
-    font-family: 'Oswald';
-    src: url('/assets/fonts/oswald/Oswald-ExtraLight.woff2') format('woff2'),
-    url('/assets/fonts/oswald/Oswald-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
     font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/assets/fonts/inter-tight/inter-tight-v8-cyrillic_cyrillic-ext-100.woff2') format('woff2');
 }
 
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/assets/fonts/inter-tight/inter-tight-v8-cyrillic_cyrillic-ext-200.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/assets/fonts/inter-tight/inter-tight-v8-cyrillic_cyrillic-ext-300.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/inter-tight/inter-tight-v8-cyrillic_cyrillic-ext-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/assets/fonts/inter-tight/inter-tight-v8-cyrillic_cyrillic-ext-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/assets/fonts/inter-tight/inter-tight-v8-cyrillic_cyrillic-ext-600.woff2') format('woff2');
+}
+
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/inter-tight/inter-tight-v8-cyrillic_cyrillic-ext-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/assets/fonts/inter-tight/inter-tight-v8-cyrillic_cyrillic-ext-800.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/assets/fonts/inter-tight/inter-tight-v8-cyrillic_cyrillic-ext-900.woff2') format('woff2');
+}
+
+
+:root{
+    --font-size-32-24: 32px;
+    --font-size-16-12: 16px;
+}
+
+@media (max-width: 992px) {
+    :root{
+        --font-size-32-24: 24px;
+        --font-size-16-12: 12px;
+    }
+
+}
+
+
+.fontWeight500{
+    font-weight: 500;
+}
 
 h1, h2, h3, h4, h5, h6, p {
     padding: 0;
     margin: 0;
 }
 
+h1{
+    font-size: var(--font-size-32-24);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.32px;
+}
+
+.text-m{
+    font-size: var(--font-size-16-12);
+}
 
