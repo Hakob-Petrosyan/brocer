@@ -5,13 +5,14 @@ title = '404'
 }}
 <body>
 
+{{> header}}
+
 <main class="width-container">
     {{> breadcrumbs
     currenPage = '404'
     }}
 
     <section class="error-page-section imgWrapper flexBox">
-
         <div class="error-page-content flexColumn">
             <h1 class="color__white">404</h1>
 
@@ -19,9 +20,11 @@ title = '404'
 
             <a href="/" class="error-page-content__btn btn-custom btn__red color__white">На главную</a>
         </div>
-
     </section>
+
 </main>
+
+{{> footer}}
 
 </body>
 </html>

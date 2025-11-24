@@ -76,19 +76,27 @@
 :root{
     --font-size-32-24: 32px;
     --font-size-16-12: 16px;
+    --font-size-12-10: 12px;
+    --font-size-10-8: 10px;
+
+    --font-size-12: 12px;
 }
 
 @media (max-width: 992px) {
     :root{
         --font-size-32-24: 24px;
         --font-size-16-12: 12px;
+        --font-size-12-10: 10px;
+        --font-size-10-8: 8px;
     }
-
 }
 
 
 .fontWeight500{
     font-weight: 500;
+}
+.fontWeight600{
+    font-weight: 600;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -105,5 +113,9 @@ h1{
 
 .text-m{
     font-size: var(--font-size-16-12);
+}
+
+.font-size-10-8{
+    font-size: var(--font-size-10-8);
 }
 
