@@ -74,8 +74,12 @@
 
 
 :root{
+    --font-size-32-26: 32px;
     --font-size-32-24: 32px;
+    --font-size-20-16: 20px;
+    --font-size-16-14: 16px;
     --font-size-16-12: 16px;
+    --font-size-16-10: 16px;
     --font-size-12-10: 12px;
     --font-size-10-8: 10px;
 
@@ -84,8 +88,12 @@
 
 @media (max-width: 992px) {
     :root{
+        --font-size-32-26: 26px;
         --font-size-32-24: 24px;
+        --font-size-20-16: 16px;
+        --font-size-16-14: 14px;
         --font-size-16-12: 12px;
+        --font-size-16-10: 10px;
         --font-size-12-10: 10px;
         --font-size-10-8: 8px;
     }
@@ -104,18 +112,64 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
-h1{
-    font-size: var(--font-size-32-24);
+h1, .h1,
+h4, .h4,
+.text-m,
+.text-l,
+.text_S{
     font-weight: 500;
+}
+
+h1,
+.h1{
+    font-size: var(--font-size-32-26);
     line-height: 100%;
     letter-spacing: -0.32px;
 }
 
+h4,
+.h4{
+    font-size: var(--font-size-20-16);
+    line-height: 120%;
+    letter-spacing: -0.2px;
+}
+
 .text-m{
+    font-size: var(--font-size-16-14);
+    line-height: 130%
+}
+
+.text-l{
     font-size: var(--font-size-16-12);
+    line-height: 100%;
+    letter-spacing: -0.16px;
+}
+
+.text_S{
+    font-size: var(--font-size-12-10);
+    line-height: 130%;
 }
 
 .font-size-10-8{
     font-size: var(--font-size-10-8);
 }
 
+
+
+
+@media (max-width: 992px) {
+    h1
+    .h1{
+        letter-spacing: -0.26px;
+    }
+
+    h4,
+    .h4{
+        letter-spacing: -0.16px;
+    }
+
+    .text-l{
+        font-size: var(--font-size-16-12);
+        letter-spacing: -0.12px;
+    }
+}

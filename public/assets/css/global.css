@@ -13,7 +13,12 @@
     --color-gray-25: #757575;
     --color-gray-30: #878684;
     --color-gray-35: #8D8D8D;
+    --color-gray-36: #8c8c8c;
     --color-light_gray: #adaeae;
+    --color-light_gray-10: #AEAFAF;
+    --color-light_gray-15: #CDD1D4;
+    --color-light_gray-20: #F3F5F6;
+    --color-light_gray-25: #f1f1f1;
     --color-gray-40: #ccd0d3;
 
     --color-primary-5: #000000;
@@ -23,6 +28,7 @@
     --color-blue-dark: #081d32;
     --color-blue-10: #0f2438;
     --color-blue: #2c81d7;
+    --color-blue-20: #2C82D8;
     --color-blue-light: #f0f3f4;
     --color-blue-light-25: #f1f3f4;
 
@@ -34,6 +40,9 @@
     color: var(--color-white);
 }
 
+.color__gray{
+    color: var(--color-gray);
+}
 .color__gray-30{
     color: var(--color-gray-30);
 }
@@ -42,6 +51,19 @@
     color: var(--color-gray-35);
 }
 
+.color-blue-20{
+    color: var(--color-blue-20);
+}
+
+.color-gray-36{
+    color: var(--color-gray-36);
+}
+
+
+
+.bg__white{
+    background-color: var(--color-white);
+}
 .bg__blue-dark{
     background-color: var(--color-blue-dark)
 }
@@ -71,6 +93,12 @@ body {
     margin-top: 120px;
 }
 
+.home__page-section{
+    margin-top: 80px;
+}
+
+
+
 a {
     color: var(--color-black);
     text-decoration: none;
@@ -97,7 +125,15 @@ button {
     border: 1px solid var(--color-white);
     color: var(--color-white);
     border-radius: 12px;
-    padding: 0 20px;
+    transition: color 300ms, border-color 300ms, background-color 300ms;
+}
+
+.btn-dark svg path{
+    transition: fill 300ms;
+}
+
+.btn-dark svg path{
+    transition: stroke 300ms;
 }
 
 
@@ -170,19 +206,16 @@ img {
 }
 
 ::placeholder {
-    color: var(--color-dust);
+    color: var(--color-light_gray-10);
     opacity: 1;
-    text-transform: uppercase;
 }
 
 :-ms-input-placeholder {
-    color: var(--color-dust);
-    text-transform: uppercase;
+    color: var(--color-light_gray-10);
 }
 
 ::-ms-input-placeholder {
-    color: var(--color-dust);
-    text-transform: uppercase;
+    color: var(--color-light_gray-10);
 }
 
 .textCenter {
@@ -206,11 +239,29 @@ img {
     display: block;
 }
 
+input{
+    border: none;
+    outline: none;
+}
+
+.overflowHidden{
+    overflow: hidden;
+}
+
+.borderRadius-24-16{
+    border-radius: 24px;
+}
+
 
 @media (max-width: 992px) {
+    .btn-dark{
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        padding: 0 12px;
+    }
 
+    .home__page-section,
     .page-section {
-
+        margin-top: 56px;
     }
 
     .flex__row__column {
@@ -220,6 +271,11 @@ img {
     .btn-custom{
         height: 38px;
     }
+
+    .borderRadius-24-16{
+        border-radius: 16px;
+    }
+
 
 }
 
@@ -232,6 +288,21 @@ img {
 
     .btn__red:hover{
         background-color: var(--color-primary-light);
+    }
+
+    .search-btn:hover,
+    .btn-dark-icon__hover:hover,
+    .btn-dark__hover:hover{
+        background-color: var(--color-white);
+        color: var(--color-primary-light);
+    }
+
+    .btn-dark-icon__hover:hover svg path{
+        fill: var(--color-primary-light);
+    }
+
+    .search-btn:hover svg path{
+        stroke: var(--color-primary-light);
     }
 
 }
