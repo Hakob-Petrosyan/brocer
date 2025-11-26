@@ -16,6 +16,7 @@
     --color-gray-36: #8c8c8c;
     --color-light_gray: #adaeae;
     --color-light_gray-10: #AEAFAF;
+    --color-light_gray-11: #b3b3b3;
     --color-light_gray-15: #CDD1D4;
     --color-light_gray-20: #F3F5F6;
     --color-light_gray-25: #f1f1f1;
@@ -58,6 +59,8 @@
 .color-gray-36{
     color: var(--color-gray-36);
 }
+
+
 
 
 
@@ -141,6 +144,8 @@ button {
     background-color: var(--color-primary);
     color: var(--color-white);
 }
+
+
 
 img {
     width: 100%;
@@ -232,11 +237,17 @@ img {
 
 
 [data-container]{
-    display: none;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
 }
 
 [data-container].active{
-    display: block;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
 }
 
 input{
@@ -251,6 +262,7 @@ input{
 .borderRadius-24-16{
     border-radius: 24px;
 }
+
 
 
 @media (max-width: 992px) {

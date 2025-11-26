@@ -76,6 +76,8 @@
 :root{
     --font-size-32-26: 32px;
     --font-size-32-24: 32px;
+    --font-size-28-18: 28px;
+    --font-size-24-18: 24px;
     --font-size-20-16: 20px;
     --font-size-16-14: 16px;
     --font-size-16-12: 16px;
@@ -90,6 +92,8 @@
     :root{
         --font-size-32-26: 26px;
         --font-size-32-24: 24px;
+        --font-size-28-18: 18px;
+        --font-size-24-18: 18px;
         --font-size-20-16: 16px;
         --font-size-16-14: 14px;
         --font-size-16-12: 12px;
@@ -99,13 +103,6 @@
     }
 }
 
-
-.fontWeight500{
-    font-weight: 500;
-}
-.fontWeight600{
-    font-weight: 600;
-}
 
 h1, h2, h3, h4, h5, h6, p {
     padding: 0;
@@ -152,6 +149,14 @@ h4,
 
 .font-size-10-8{
     font-size: var(--font-size-10-8);
+}
+
+
+.fontWeight500{
+    font-weight: 500;
+}
+.fontWeight600{
+    font-weight: 600;
 }
 
 

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+{{> head
+title = 'Услуги'
+}}
+<body>
+
+{{> header}}
+
+<main>
+    {{> breadcrumbs
+    currenPage = 'Частным лицам'
+    }}
+
+    {{> lead-form
+    pageSectionType="top-section"
+    leadFormImage="/assets/images/banners/bg-image-2.webp"
+    leadFormImageMobile="/assets/images/banners/bg-image-2-mb.webp"
+    leadFormTitle="Получите кредит на выгодных условиях"
+    leadFormSubtitle="Описание условий, ставки, сроки, без справок или поручителей и т.д. "
+    leadFormStatsTitle="Уже помогли 1 287 клиентам в Екатеринбурге"
+    }}
+
+
+    {{> success-stats
+    pageSectionType="page-section"
+    sectionTitle="Почему 9 из 10 клиентов получают кредит с нами"
+    }}
+
+    {{> lead-form
+    pageSectionType="page-section"
+    leadFormImage="/assets/images/banners/bg-image-3.webp"
+    leadFormImageMobile="/assets/images/banners/bg-image-3-mb.webp"
+    leadFormTitle="Проверьте свою кредитную историю"
+    leadFormSubtitle=""
+    leadFormStatsTitle="Проверить"
+    statsSubTitle="Гарантия быстрой связи (5-10 минут)"
+    }}
+
+    {{> reviews-slider
+    pageSectionType="page-section"
+    }}
+
+    {{> certificates-slider
+    pageSectionType="page-section"
+    }}
+
+
+    {{> faq
+    pageSectionType="page-section"
+    }}
+
+    {{> contacts-section
+    pageSectionType="page-section"
+    }}
+
+    <section class="page-section width-container">
+
+        <div class="seo-section bg__white flexCenter borderRadius-24-16">
+            <div class="seo-block flexColumn" data-open-block-wrapper>
+                <div class="section__title">SEO-text</div>
+
+                <div class="seo-block__content color__gray" data-open-block>
+                    <p>
+                        Политика в отношении обработки персональных данных
+                        1одование персональных данных в средствах массовой информации, размещение в и
+
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Consectetur doloremque error facere. Accusantium deleniti error
+                        expedita illo, incidunt inventore laboriosam nostrum nulla
+                        obcaecati recusandae rem reprehenderit sit, tempora unde veniam!
+                    </p>
+                </div>
+
+
+                <button type="button" class="bore-seo-btn btn__red btn-custom text-l" data-open-block-btn>Показать еще</button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+</main>
+
+{{> footer}}
+
+{{> scripts}}
+
+</body>
+</html>
