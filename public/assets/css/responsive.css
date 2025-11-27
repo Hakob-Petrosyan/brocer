@@ -326,6 +326,61 @@
         background-image: none;
     }
 
+    .consultation-title{
+        letter-spacing: -0.26px;
+    }
+
+    .consultation-section{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+
+    .consultation-content{
+        padding: 16px;
+    }
+
+    .consultation-consultant{
+        background-position: right top;
+    }
+
+    .consultation-top{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
+    .consultation-time__wrapper{
+        justify-content: center;
+    }
+
+    .consultation-form{
+        grid-template-columns: 100%;
+        gap: 12px;
+    }
+
+    .consultation-form .form__submit{
+        margin-top: 12px;
+    }
+
+    .consultation-form .form__input{
+        height: 40px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*END home*/
 
     .seo-section{
@@ -384,6 +439,7 @@
 
 
 @media (max-width: 480px) {
+
 
 
 }

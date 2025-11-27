@@ -17,8 +17,10 @@
     --color-light_gray: #adaeae;
     --color-light_gray-10: #AEAFAF;
     --color-light_gray-11: #b3b3b3;
+    --color-light_gray-12: #b4b4b4;
     --color-light_gray-15: #CDD1D4;
     --color-light_gray-20: #F3F5F6;
+    --color-light_gray-21: #F2F5F6;
     --color-light_gray-25: #f1f1f1;
     --color-gray-40: #ccd0d3;
 
@@ -60,6 +62,9 @@
     color: var(--color-gray-36);
 }
 
+.color-light_gray-12{
+    color: var(--color-light_gray-12);
+}
 
 
 
@@ -263,6 +268,17 @@ input{
     border-radius: 24px;
 }
 
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
 
 
 @media (max-width: 992px) {
