@@ -11,6 +11,7 @@
     --color-gray: #696969;
     --color-gray-20: #767676;
     --color-gray-25: #757575;
+    --color-gray-26: #77887a;
     --color-gray-30: #878684;
     --color-gray-35: #8D8D8D;
     --color-gray-36: #8c8c8c;
@@ -19,7 +20,9 @@
     --color-light_gray-11: #b3b3b3;
     --color-light_gray-12: #b4b4b4;
     --color-light_gray-15: #CDD1D4;
+    --color-light_gray-16: #CCD1D4;
     --color-light_gray-20: #F3F5F6;
+
     --color-light_gray-21: #F2F5F6;
     --color-light_gray-25: #f1f1f1;
     --color-gray-40: #ccd0d3;
@@ -33,12 +36,17 @@
     --color-blue: #2c81d7;
     --color-blue-20: #2C82D8;
     --color-blue-light: #f0f3f4;
+    --color-blue-light-20: #E2F7FF;
     --color-blue-light-25: #f1f3f4;
 
     --color-green: #60d569;
 
 }
 
+
+.color-black{
+    color: var(--color-black);
+}
 .color__white{
     color: var(--color-white);
 }
@@ -65,6 +73,10 @@
 .color-light_gray-12{
     color: var(--color-light_gray-12);
 }
+.color-primary{
+    color: var(--color-primary);
+}
+
 
 
 
@@ -77,6 +89,9 @@
 }
 .bg__blue-10{
     background-color: var(--color-blue-10);
+}
+.bg__color-primary-light{
+    background-color: var(--color-primary-light);
 }
 
 
@@ -127,6 +142,7 @@ button {
     white-space: nowrap;
     height: 56px;
     border-radius: 12px;
+    padding: 0 32px;
 }
 
 .btn-dark{
@@ -298,6 +314,7 @@ input[type="number"]:focus {
 
     .btn-custom{
         height: 38px;
+        padding: 0 16px;
     }
 
     .borderRadius-24-16{

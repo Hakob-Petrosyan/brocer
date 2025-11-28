@@ -10,17 +10,60 @@ title = 'home'
 
 <main>
 
-
-
+    {{> breadcrumbs
+    currenPage = 'Контакты'
+    }}
 
     {{> contacts-section
-    pageSectionType="page-section"
+    pageSectionType="top-section"
     }}
+
+    <section class="width-container">
+        <div class="requisites-section bg__white flexColumn">
+            <h2 class="color-black">Реквизиты</h2>
+
+            <div class="requisites-content">
+                <dl class="requisites__list">
+                    <dt class="requisites__term">Учредитель:</dt>
+                    <dd class="requisites__detail">ИП Иванов Иван Иванович</dd>
+                </dl>
+                <dl class="requisites__list">
+                    <dt class="requisites__term">Юридический адрес:</dt>
+                    <dd class="requisites__detail h4">350080, г. Москва, ул. им. Тюляева, д. 19, корп. 2, кв. 37А</dd>
+                </dl>
+                <dl class="requisites__list">
+                    <dt class="requisites__term">ОГРНИП:</dt>
+                    <dd class="h4">312619331900051 выдано 14.11.2012 г.</dd>
+                </dl>
+                <dl class="requisites__list">
+                    <dt class="requisites__term">ИНН:</dt>
+                    <dd class="h4">616122918539</dd>
+                </dl>
+                <dl class="requisites__list">
+                    <dt class="requisites__term">Р/сч.:</dt>
+                    <dd class="h4">40802810252000000680</dd>
+                </dl>
+                <dl class="requisites__list">
+                    <dt class="requisites__term">К/сч.:</dt>
+                    <dd class="h4">30101810600000000602</dd>
+                </dl>
+                <dl class="requisites__list">
+                    <dt class="requisites__term">Банк:</dt>
+                    <dd class="h4">Юго-Западный банк ПАО «Сбербанк России» г. Ростов-на-Дону</dd>
+                </dl>
+                <dl class="requisites__list">
+                    <dt class="requisites__term">БИК:</dt>
+                    <dd class="h4">046015602</dd>
+                </dl>
+            </div>
+
+        </div>
+
+    </section>
 
     {{> consultation-block
     pageSectionType="page-section"
     }}
-
 </main>
 
 {{> footer}}

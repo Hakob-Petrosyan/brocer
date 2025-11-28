@@ -44,21 +44,34 @@ function initTabs() {
         });
     });
 }
+
+
+
+
 function openCloseBlock() {
     const openBlockBtn = document.querySelectorAll('[data-open-block-btn]');
     openBlockBtn.forEach(openBtn => {
         openBtn?.addEventListener('click', (event) => {
             const openBlockWrapper = event.target.closest('[data-open-block-wrapper]');
             const openingBlock = openBlockWrapper.querySelector('[data-open-block]');
+            const hasChangeText = openBtn.hasAttribute('data-change-btn-text');
+
             openBlockWrapper.classList.toggle('open');
             if (openingBlock.style.maxHeight) {
                 openingBlock.removeAttribute('style');
+                if (hasChangeText) {
+                    openBtn.textContent = 'Показать еще';
+                }
             } else {
                 openingBlock.style.maxHeight = openingBlock.scrollHeight + 'px';
+                if (hasChangeText) {
+                    openBtn.textContent = 'Скрыть';
+                }
             }
         })
     })
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     initVideo()
     initTabs()
@@ -177,6 +190,7 @@ document.addEventListener('focus', function (e) {
         }
     }
 }, true);
+
 
 
 

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+{{> head
+title = 'О компании'
+}}
+<body>
+
+{{> header }}
+
+
+<main>
+
+    {{> breadcrumbs
+    currenPage = 'О компании'
+    }}
+
+
+    {{> stats
+    pageSectionType="page-section__stats"
+    }}
+
+
+    {{> service-section
+    pageSectionType="page-section"
+    }}
+
+    <section class="page-section width-container">
+        <div class="promo-block bg__color-primary-light color__white borderRadius-24-16 flexAlignCenter flexJustifyBetween">
+            <div class="promo-content flexColumn">
+                <span class="promo-title fontWeight500">Только в ноябре!</span>
+                <p class="promo-description fontWeight500">
+                    Запускаем новый поток партнеров! <br>
+                    Обучим профессии кредитный брокер бесплатно
+                </p>
+            </div>
+
+            <button class="promo-content__btn bg__white color-primary fontWeight500 whiteBtnHover">Получить консультацию</button>
+        </div>
+    </section>
+
+    {{> certificates-slider
+    pageSectionType="page-section"
+    }}
+
+    {{> reviews-slider
+    pageSectionType="page-section"
+    }}
+
+    {{> faq
+    pageSectionType="page-section"
+    }}
+
+    {{> contacts-section
+    pageSectionType="page-section"
+    }}
+
+    {{> consultation-block
+    pageSectionType="page-section"
+    }}
+
+    {{> seo }}
+</main>
+
+{{> footer}}
+
+{{> scripts}}
+</body>
+</html>

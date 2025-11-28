@@ -162,12 +162,13 @@
 }
 
 .form__input {
-    height: 48px;
+    height: 53px;
     padding: 0 24px;
     background-color: var(--color-light_gray-20);
     border: 1px solid var(--color-light_gray-15);
     border-radius: 12px;
 }
+
 
 .form__inputs {
     gap: 12px;
@@ -261,13 +262,6 @@
 .stats__card-3 {
     background-image: url("/assets/images/card-icons/stats-image-3.webp");
     background-position: bottom 0 right 0;
-}
-
-.section__title {
-    font-size: var(--font-size-32-24);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.32px;
 }
 
 .slider-control-btn {
@@ -436,7 +430,6 @@
     font-size: var(--font-size-16-12);
     line-height: 100%;
     letter-spacing: -0.16px;
-    padding: 0 32px;
 }
 
 .pans-btn.active {
@@ -651,7 +644,7 @@
     gap: 24px;
 }
 
-.consultation-title{
+.title-26-18{
     font-size: var(--font-size-26-18);
     font-weight: 500;
     line-height: 120%;
@@ -719,21 +712,110 @@
     margin-bottom: 4px;
 }
 
-.consultation-form .form__input{
-    height: 53px;
+.service-section__bottom{
+    margin-top: 32px;
 }
 
+.calculator-block{
+    padding: 40px;
+}
 
+.calculator-content{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
+.calculator-content-col{
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid var(--color-blue-light-20);
+}
 
+.calculator-result-col{
+    gap: 12px;
+}
 
+.calculator-result__list{
+    margin-top: 16px;
+    gap: 12px;
+    font-size: var(--font-size-16-12);
+    font-weight: 600;
+    line-height: 130%;
+}
 
+.calculator-result__list li{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
 
+.calculator-result__title{
+    font-size: var(--font-size-12-10);
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.12px;
+}
 
+.calculator-result__details{
+    color: var(--color-light_gray-11);
+}
 
+.calculator-result__value{
+    color: var(--color-gray);
+}
 
+.request-form-inputs{
+    gap: 45px;
+}
+.request-form__bottom{
+    gap: 24px;
+}
 
+.calculator-result__line{
+    height: 1px;
+    background-color: var(--color-light_gray-16);
+}
 
+.promo-block{
+    border: 1px solid var(--color-blue-light-20);
+    padding: 64px 48px;
+    background-image: url("/assets/images/banners/bg-image-4.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo-title{
+    font-size: var(--font-size-32);
+    line-height: 100%;
+    letter-spacing: -0.32px;
+}
+
+.promo-content{
+    gap: 32px;
+}
+
+.promo-description{
+    font-size: var(--font-size-16);
+    line-height: 130%
+}
+
+.promo-content__btn{
+    height: 56px;
+    padding: 0 32px;
+    border-radius: 12px;
+    font-size: var(--font-size-16);
+}
+
+.whiteBtnHover{
+    transition: background-color 300ms, color 300ms, border-bottom-color 300ms;
+}
+
+.whiteBtnHover svg path{
+    transition: fill 300ms;
+}
 /*END Home*/
 
 
@@ -748,8 +830,7 @@
 }
 
 .bore-seo-btn{
-    width: fit-content;
-    padding: 0 32px;
+    max-width: 165px;
 }
 
 .seo-block__content{
@@ -761,7 +842,76 @@
     transition: max-height 300ms;
 }
 
+.service-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.service-containers{
+    margin-top: 32px;
+}
+
+.service-top{
+    gap: 8px;
+}
+
 /*END service page*/
+
+/*contacts page*/
+.requisites-section{
+    margin-top: 20px;
+    padding: 32px;
+    border-radius: 24px;
+    gap: 47px;
+}
+
+.requisites-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 47px 29px;
+}
+
+.requisites__term{
+    font-size: var(--font-size-16-12);
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.16px;
+    color: var(--color-gray-26);
+    margin-bottom: 12px;
+}
+
+.requisites-content dl,
+.requisites-content dd{
+    padding: 0;
+    margin: 0;
+}
+/*END contacts page*/
+
+/*contacts page*/
+.page-section__stats{
+    margin-top: 32px;
+}
+/*END contacts page*/
+
+
+
+/*confidentiality page*/
+.confidentiality-container{
+    padding: 64px 48px;
+}
+
+.confidentiality-section{
+    max-width: 590px;
+}
+
+.confidentiality-content{
+    margin-top: 32px;
+    font-size: var(--font-size-16-12);
+    font-weight: 500;
+    line-height: 130%;
+}
+/*END confidentiality page*/
 
 /*error page*/
 .error-page-section {
@@ -840,5 +990,27 @@
         visibility: visible;
         opacity: 1;
     }
+
+    .whiteBtnHover:hover{
+        background-color: var(--color-blue-20);
+        color: var(--color-white);
+    }
+    .whiteBtnHover:hover svg path{
+        fill: var(--color-white);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

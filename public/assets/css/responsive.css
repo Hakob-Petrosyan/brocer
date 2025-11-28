@@ -33,6 +33,11 @@
     .footer-content {
         gap: 40px;
     }
+
+    .calculator-content{
+        grid-template-columns: 100%;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -216,7 +221,6 @@
 
     .pans-btn {
         letter-spacing: -0.12px;
-        padding: 0 16px;
     }
 
     .tubs-section-top {
@@ -265,12 +269,13 @@
         max-width: 165px;
     }
 
-    .section__title {
-        letter-spacing: -0.24px;
-    }
-
     .service-section__title {
         letter-spacing: -0.18px;
+    }
+
+    .service-card__tag{
+        height: 20px;
+        padding: 0 8px;
     }
 
     .faq-grid {
@@ -326,7 +331,7 @@
         background-image: none;
     }
 
-    .consultation-title{
+    .title-26-18{
         letter-spacing: -0.26px;
     }
 
@@ -363,26 +368,39 @@
         margin-top: 12px;
     }
 
-    .consultation-form .form__input{
+    .form__input{
         height: 40px;
     }
 
+    .calculator-result__title{
+        letter-spacing: -0.1px;
+    }
 
+    .calculator-block,
+    .calculator-content-col{
+        padding: 16px;
+    }
 
+    .calculator-content{
+        margin-top: 12px;
+        gap: 12px;
+    }
 
+    .request-form-inputs{
+        gap: 16px;
+    }
 
-
-
-
-
-
-
+    .form__input,
+    .form__input-title{
+        padding: 0 16px;
+    }
 
 
 
 
     /*END home*/
 
+    /*service page*/
     .seo-section{
         padding: 16px;
     }
@@ -391,12 +409,50 @@
         gap: 16px;
     }
 
+    .service-containers{
+        margin-top: 12px;
+    }
+
     .bore-seo-btn{
-        width: 100%;
+        max-width: 100%;
+    }
+
+    .requisites__term{
+        letter-spacing: -0.12px;
+    }
+
+    .requisites-section{
+        margin-top: 24px;
+        gap: 16px;
+    }
+
+    .requisites-content{
+        grid-template-columns: 100%;
+        gap: 16px;
+    }
+
+    .page-section__stats{
+        margin-top: 56px;
+    }
+
+    .service-content{
+        margin-top: 12px;
+        grid-template-columns: 100%;
+        gap: 32px;
+    }
+
+    .service-section__bottom{
+        margin-top: 12px;
     }
 
 
 
+    /*END service page*/
+
+
+
+
+    /*error page*/
     .error-page-section {
         aspect-ratio: 300/480;
         background-image: url("/assets/images/main/404-img-mob.webp");
@@ -406,6 +462,23 @@
     .error-page-content {
         gap: 16px;
     }
+    /*END error page*/
+
+    /*confidentiality page*/
+    .confidentiality-container{
+        padding: 16px;
+    }
+
+    .confidentiality-section{
+        max-width: 100%;
+    }
+
+    .confidentiality-content{
+        margin-top: 16px;
+    }
+    /*END confidentiality page*/
+
+
 
     /*footer*/
     .footer {

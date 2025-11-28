@@ -86,6 +86,7 @@
     --font-size-12-10: 12px;
     --font-size-10-8: 10px;
 
+    --font-size-32: 32px;
     --font-size-16: 16px;
     --font-size-12: 12px;
 }
@@ -113,6 +114,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, .h1,
+h2, .h2,
 h4, .h4,
 .text-m,
 .text-l,
@@ -125,6 +127,14 @@ h1,
     font-size: var(--font-size-32-26);
     line-height: 100%;
     letter-spacing: -0.32px;
+}
+
+h2,
+.h2{
+    font-size: var(--font-size-32-24);
+    line-height: 100%;
+    letter-spacing: -0.32px;
+    color: var(--color-white);
 }
 
 h4,
@@ -169,6 +179,11 @@ h4,
     h1
     .h1{
         letter-spacing: -0.26px;
+    }
+
+    h2,
+    .h2{
+        letter-spacing: -0.24px;
     }
 
     h4,
