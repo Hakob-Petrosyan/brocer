@@ -79,6 +79,7 @@
     --font-size-28-18: 28px;
     --font-size-26-18: 26px;
     --font-size-24-18: 24px;
+    --font-size-24-16: 24px;
     --font-size-20-16: 20px;
     --font-size-16-14: 16px;
     --font-size-16-12: 16px;
@@ -98,6 +99,7 @@
         --font-size-26-18: 18px;
         --font-size-28-18: 18px;
         --font-size-24-18: 18px;
+        --font-size-24-16: 16px;
         --font-size-20-16: 16px;
         --font-size-16-14: 14px;
         --font-size-16-12: 12px;
@@ -164,6 +166,13 @@ h4,
     font-size: var(--font-size-10-8);
 }
 
+.font-size-24-16{
+    font-size: var(--font-size-24-16);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.24px;
+}
+
 
 .fontWeight500{
     font-weight: 500;
@@ -194,5 +203,9 @@ h4,
     .text-l{
         font-size: var(--font-size-16-12);
         letter-spacing: -0.12px;
+    }
+
+    .font-size-24-16{
+        letter-spacing: -0.16px;
     }
 }

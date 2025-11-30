@@ -777,44 +777,87 @@
     height: 1px;
     background-color: var(--color-light_gray-16);
 }
-
-.promo-block{
-    border: 1px solid var(--color-blue-light-20);
-    padding: 64px 48px;
-    background-image: url("/assets/images/banners/bg-image-4.webp");
-    background-size: cover;
+.steps-section{
+    border-radius: 24px;
+    padding: 64px 48px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-image: url("/assets/images/banners/bg-figures.webp");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left -38% bottom -38%;
 }
 
-.promo-title{
-    font-size: var(--font-size-32);
-    line-height: 100%;
-    letter-spacing: -0.32px;
-}
-
-.promo-content{
+.steps-section-description__top{
     gap: 32px;
 }
 
-.promo-description{
-    font-size: var(--font-size-16);
-    line-height: 130%
+.steps-section__process{
+    padding-bottom: 64px;
 }
 
-.promo-content__btn{
-    height: 56px;
-    padding: 0 32px;
-    border-radius: 12px;
-    font-size: var(--font-size-16);
+.steps-section__image{
+    margin-top: auto;
 }
 
-.whiteBtnHover{
-    transition: background-color 300ms, color 300ms, border-bottom-color 300ms;
+.steps-section__image img{
+    margin-top: -56px;
+    max-width: 495px;
 }
 
-.whiteBtnHover svg path{
-    transition: fill 300ms;
+.process-item__description{
+    gap: 32px;
+    padding-bottom: 80px;
+}
+
+.process-item__number{
+    color: var(--color-blue-20);
+    display: flex;
+    width: 32px;
+    min-width: 32px;
+    margin-right: 10px;
+}
+
+.process-item__line{
+    margin-right: 14px;
+    width: 1px;
+    background-color: var(--color-blue-20);
+    text-align: center;
+}
+.process-item__line:before{
+    content: "";display: block;
+    background-color: var(--color-blue-20);
+    height: 9px;
+    width: 9px;
+    border-radius: 100%;
+    margin-left: -4px;
+}
+
+.process-list__text{
+    max-width: 405px;
+}
+
+.process-list__text{
+    font-size: var(--font-size-16-12);
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.process-item:last-child .process-item__description{
+    padding-bottom: 0;
+}
+
+.history-item__number{
+    width: 100px;
+    min-width: 100px;
+}
+
+.history-section__image{
+   margin-top: auto;
+}
+
+.history-section__image img{
+    max-width: 515px;
 }
 /*END Home*/
 
@@ -886,9 +929,7 @@
     padding: 0;
     margin: 0;
 }
-/*END contacts page*/
 
-/*contacts page*/
 .page-section__stats{
     margin-top: 32px;
 }
@@ -912,6 +953,81 @@
     line-height: 130%;
 }
 /*END confidentiality page*/
+
+/*about page*/
+.about-top-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.about-description,
+.about-description ul,
+.about-description ol,
+.about-description a,
+.about-description p{
+    font-size: var(--font-size-16-12);
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.about-top__item{
+    padding: 64px;
+    gap: 32px;
+}
+
+.about-top__image-wrapper{
+    background-image: url("/assets/images/banners/bg-figures.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: -180px;
+    min-height: 450px;
+}
+
+.about-top__image{
+    background-image: url("/assets/images/banners/consultant-img-2.webp");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.promo-block{
+    border: 1px solid var(--color-blue-light-20);
+    padding: 64px 48px;
+    background-image: url("/assets/images/banners/bg-image-4.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo-title{
+    font-size: var(--font-size-32);
+    line-height: 100%;
+    letter-spacing: -0.32px;
+}
+
+.promo-content{
+    gap: 32px;
+}
+
+.promo-description{
+    font-size: var(--font-size-16);
+    line-height: 130%
+}
+
+.promo-content__btn{
+    height: 56px;
+    padding: 0 32px;
+    border-radius: 12px;
+    font-size: var(--font-size-16);
+}
+
+.history-item__number{
+    width: 100px;
+    min-width: 100px;
+}
+/*END about page*/
 
 /*error page*/
 .error-page-section {
@@ -989,14 +1105,6 @@
     .reviews-card:hover .show-full-review-btn {
         visibility: visible;
         opacity: 1;
-    }
-
-    .whiteBtnHover:hover{
-        background-color: var(--color-blue-20);
-        color: var(--color-white);
-    }
-    .whiteBtnHover:hover svg path{
-        fill: var(--color-white);
     }
 }
 

@@ -395,9 +395,35 @@
         padding: 0 16px;
     }
 
+    .steps-section-description__top{
+        gap: 12px;
+    }
 
+    .steps-section{
+        grid-template-columns: 100%;
+        gap: 24px;
+        background-image: none;
+        padding: 16px 16px 0;
+    }
 
+    .process-item__number{
+        font-size: var(--font-size-24-16);
+        font-weight: 500;
+        line-height: 100%;
+    }
 
+    .process-item__description{
+        padding-bottom: 32px;
+        gap: 12px;
+    }
+
+    .steps-section__process{
+        padding-bottom: 0;
+    }
+
+    .process-item:last-child .process-item__description{
+        padding-bottom: 16px;
+    }
     /*END home*/
 
     /*service page*/
@@ -445,12 +471,38 @@
         margin-top: 12px;
     }
 
-
-
     /*END service page*/
 
+    /*about page*/
+    .about-top-section{
+        grid-template-columns: 100%;
+        gap: 12px;
+    }
+    .about-top__item{
+        padding: 16px;
+        gap: 12px;
+    }
+    .about-top__image-wrapper{
+        min-height: 291px;
+        background-position: center;
+        background-size: cover;
+    }
 
+    .process-item__number{
+        width: 42px;
+        min-width: 42px;
+    }
 
+    .about-top__image{
+        background-size: 80%;
+    }
+    .promo-block{
+        padding: 16px 16px 32px;
+        flex-direction: column;
+        gap: 88px;
+        background-image: url("/assets/images/banners/bg-image-4-mob.webp");
+    }
+    /*END about page*/
 
     /*error page*/
     .error-page-section {

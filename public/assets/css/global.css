@@ -296,6 +296,14 @@ input[type="number"]:focus {
     -moz-appearance: textfield;
 }
 
+.whiteBtnHover{
+    transition: background-color 300ms, color 300ms, border-bottom-color 300ms;
+}
+
+.whiteBtnHover svg path{
+    transition: fill 300ms;
+}
+
 
 @media (max-width: 992px) {
     .btn-dark{
@@ -348,6 +356,15 @@ input[type="number"]:focus {
 
     .search-btn:hover svg path{
         stroke: var(--color-primary-light);
+    }
+
+    .whiteBtnHover:hover{
+        background-color: var(--color-blue-20);
+        color: var(--color-white);
+    }
+
+    .whiteBtnHover:hover svg path{
+        fill: var(--color-white);
     }
 
 }

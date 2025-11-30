@@ -14,14 +14,32 @@ title = 'О компании'
     currenPage = 'О компании'
     }}
 
+    <section class="about-top-section top-section width-container">
+        <div class="about-top__item bg__white borderRadius-24-16 flexColumn">
+            <h2 class="color-black">О компании</h2>
+
+            <div class="about-description">
+                <p class="color__gray">
+                    С 2010 года мы предоставляем клиентам помощь в получении кредитов.
+                    Наша команда состоит из опытных брокеров с профильным образованием
+                    в сфере банковского дела. Специалисты регулярно проходят обучение у
+                    ведущих банков-партнеров.
+                    <br>
+                    <br>
+                    В Екатеринбурге мы сотрудничаем с 70 банками, где каждый наш клиент
+                    встречает своего специалиста или управляющего банка. В банках-партнерах
+                    наши клиенты имеют приоритет при подаче заявки, что ускоряет процесс ее
+                    рассмотрения.
+                </p>
+            </div>
+        </div>
+        <div class="about-top__image-wrapper bg__white borderRadius-24-16">
+            <div class="about-top__image"></div>
+        </div>
+    </section>
 
     {{> stats
     pageSectionType="page-section__stats"
-    }}
-
-
-    {{> service-section
-    pageSectionType="page-section"
     }}
 
     <section class="page-section width-container">
@@ -37,6 +55,75 @@ title = 'О компании'
             <button class="promo-content__btn bg__white color-primary fontWeight500 whiteBtnHover">Получить консультацию</button>
         </div>
     </section>
+
+    <section class="page-section width-container">
+        <div class="steps-section history-section bg__white ">
+            <div class="steps-section__description flexColumn">
+                <div class="steps-section-description__top flexColumn">
+                    <h2 class="color-black">История компании</h2>
+                    <p class="text-l color__gray">
+                        Бесплатно проверим кредитную историю и проверим аналитику.
+                        Работаем по договору. Без предоплат
+                    </p>
+                </div>
+
+                <div class="history-section__image flexCenter mb-hide">
+                    <img src="/assets/images/banners/consultant-img-2.webp" alt="consultant-im">
+                </div>
+            </div>
+
+            <div class="steps-section__process">
+                <div class="process-item flexBox">
+                    <span class="process-item__number history-item__number font-size-24-16">2012</span>
+                    <span class="process-item__line"></span>
+                    <div class="process-item__description flexColumn">
+                        <span class="font-size-24-16">Надежный проводник в мире кредитов</span>
+                        <p class="process-list__text color__gray">
+                            Наша команда опытных брокеров с банковским образованием уже
+                            более десяти лет помогает клиентам получать одобренные кредиты
+                            на лучших условиях. Мы сотрудничаем с 70 банками в Екатеринбурге,
+                            обеспечивая приоритетное рассмотрение заявок и персональное обслуживание.
+                            Наша философия — не массовая рассылка, а точный расчет: мы проводим глубокий
+                            анализ, улучшаем кредитный портрет клиента и направляем именно в те банки,
+                            где одобрят самое выгодное предложение.
+                        </p>
+                    </div>
+                </div>
+                <div class="process-item flexBox">
+                    <span class="process-item__number history-item__number font-size-24-16">2018</span>
+                    <span class="process-item__line"></span>
+                    <div class="process-item__description flexColumn">
+                        <span class="font-size-24-16">Встреча в офисе</span>
+                        <p class="process-list__text color__gray">Проверим кредитную историю. Проводим аналитику. Заключаем договор</p>
+                    </div>
+                </div>
+                <div class="process-item flexBox">
+                    <span class="process-item__number history-item__number  font-size-24-16">2020</span>
+                    <span class="process-item__line"></span>
+                    <div class="process-item__description flexColumn">
+                        <span class="process-list__title font-size-24-16">Оформление кредита</span>
+                        <p class="process-list__text color__gray">
+                            Наши аналитики выстраивают стратегию работы,
+                            подбирают подходящие банки, добиваются одобрения
+                        </p>
+                    </div>
+                </div>
+                <div class="process-item flexBox">
+                    <span class="process-item__number history-item__number font-size-24-16">2025</span>
+                    <span class="process-item__line"></span>
+                    <div class="process-item__description flexColumn">
+                        <span class="font-size-24-16">Деньги</span>
+                        <p class="process-list__text color__gray">Вы получаете деньги удобным способом и только после этого оплачиваете услуги</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{> service-section
+    pageSectionType="page-section"
+    serviceTitle="Наши услуги"
+    }}
 
     {{> certificates-slider
     pageSectionType="page-section"
