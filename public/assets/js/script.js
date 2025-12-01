@@ -44,10 +44,6 @@ function initTabs() {
         });
     });
 }
-
-
-
-
 function openCloseBlock() {
     const openBlockBtn = document.querySelectorAll('[data-open-block-btn]');
     openBlockBtn.forEach(openBtn => {

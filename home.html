@@ -66,6 +66,69 @@ title = 'home'
     pageSectionType="home__page-section"
     }}
 
+    <section class="home__page-section width-container">
+        <div class="decision-board bg__white borderRadius-24-16">
+            <div class="decision-board__top flexColumn">
+                <div class="decision-board__title">Онлайн-табло решений</div>
+                <p class="text-l color__gray">Прямо сейчас мы помогаем людям решать финансовые задачи</p>
+            </div>
+
+            <div class="decision-board-table-wrapper">
+                <table class="decision-board__table">
+                    <thead>
+                        <tr>
+                            <td>Дата</td>
+                            <td>Заемщик</td>
+                            <td>Сумма кредита</td>
+                            <td>Стадия сделки</td>
+                            <td>Условия кредита</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>17.11.2025</td>
+                            <td>Ер****** Е.С</td>
+                            <td>2 400 000 ₽</td>
+                            <td class="status-approved">Выдача кредита</td>
+                            <td>Банк: Совкомбанк, Одобренная сумма: 2 400 000 ₽</td>
+                        </tr>
+                        <tr>
+                            <td>13.11.2025</td>
+                            <td>Пс****** А.П</td>
+                            <td>1 200 000 ₽</td>
+                            <td class="status-approved">Выдача кредита</td>
+                            <td>Банк: Т-банк, Одобренная сумма: 1 200 000 ₽</td>
+                        </tr>
+                        <tr>
+                            <td>14.11.2025</td>
+                            <td>Мв****** И.А</td>
+                            <td>12 200 000 ₽</td>
+                            <td class="status-progress">Сбор документов</td>
+                            <td>Банк: ВТБ-банк, Одобренная сумма: 12 200 000 ₽</td>
+                        </tr>
+                        <tr>
+                            <td>11.11.2025</td>
+                            <td>Ер****** У.И</td>
+                            <td>3 400 000 ₽</td>
+                            <td class="status-approved">Выдача кредита</td>
+                            <td>Банк: Т-банк, Одобренная сумма: 3 400 000 ₽</td>
+                        </tr>
+                        <tr>
+                            <td>14.11.2025</td>
+                            <td>Пм****** У.М</td>
+                            <td>12 100 000 ₽</td>
+                            <td class="status-new">Новая заявка</td>
+                            <td>Банк: Т-банк, Одобренная сумма: 12 100 000 ₽</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    </section>
+
     {{> success-stats
     pageSectionType="home__page-section"
     sectionTitle="Почему 9 из 10 клиентов получают кредит с нами"
@@ -113,9 +176,6 @@ title = 'home'
     {{> consultation-block
     pageSectionType="home__page-section"
     }}
-
-
-
 </main>
 
 {{> footer}}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+{{> head
+title = 'Партнёрам'
+}}
+<body>
+
+{{> header }}
+
+
+<main>
+    {{> breadcrumbs
+    currenPage = 'Партнёрам'
+    }}
+
+    <section class="width-container">
+        <h1 class="h2">Партнёрам</h1>
+    </section>
+
+    <section class="partners-top-section__wrapper width-container">
+        <div class="partners-top-section borderRadius-24-16 bg__white">
+            <div class="partners-top__content">
+                <div class="h2 color-black">Заработай с нами до 500.000 в месяц!</div>
+                <p class="partners-top__description color__gray">
+                    Вы наш клиент? Вам понравилось с нами работать?
+                    Рекомендуйте нас друзьям и родственникам и получайте деньги!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    {{> stats
+    pageSectionType="page-section__stats"
+    }}
+
+   {{> promo}}
+
+    {{> service-section
+    pageSectionType="page-section"
+    serviceTitle="Наши услуги"
+    }}
+
+    {{> lead-form
+    pageSectionType="page-section"
+    leadFormImage="/assets/images/banners/bg-image-1.webp"
+    leadFormImageMobile="/assets/images/banners/bg-image-1-mb.webp"
+    leadFormTitle="Заявка на консультацию"
+    leadFormSubtitle="Оставь заявку — получи консультацию бесплатно!"
+    leadFormStatsTitle="Получить консультацю"
+    }}
+
+    {{> certificates-slider
+    pageSectionType="page-section"
+    }}
+
+    {{> reviews-slider
+    pageSectionType="page-section"
+    }}
+
+    {{> faq
+    pageSectionType="page-section"
+    }}
+
+    {{> contacts-section
+    pageSectionType="page-section"
+    }}
+
+    {{> seo }}
+</main>
+
+{{> footer}}
+
+{{> scripts}}
+</body>
+</html>

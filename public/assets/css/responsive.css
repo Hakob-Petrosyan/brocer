@@ -1,5 +1,4 @@
 @media (max-width: 1200px) {
-
     .header {
         padding: 10px;
         border-radius: 16px;
@@ -37,11 +36,9 @@
     .calculator-content{
         grid-template-columns: 100%;
     }
-
 }
 
 @media (max-width: 992px) {
-
     .header-nav {
         display: none;
     }
@@ -87,8 +84,8 @@
     .breadcrumbs li:last-child {
         color: var(--color-white);
     }
-
     /*END breadcrumbs*/
+
     /*home*/
     .top-section {
         margin-top: 16px;
@@ -114,7 +111,7 @@
     }
 
     .lead-form__content {
-        padding: 16px 16px 240px;
+        padding: 16px 16px 300px;
         min-height: unset;
     }
 
@@ -300,6 +297,12 @@
         grid-template-columns: 100%;
     }
 
+    .success-stats__features{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
     .success-stats__item-long {
         grid-column: span 1;
     }
@@ -406,10 +409,8 @@
         padding: 16px 16px 0;
     }
 
-    .process-item__number{
-        font-size: var(--font-size-24-16);
-        font-weight: 500;
-        line-height: 100%;
+    .history-item__number{
+        letter-spacing: -0.12px;
     }
 
     .process-item__description{
@@ -423,6 +424,41 @@
 
     .process-item:last-child .process-item__description{
         padding-bottom: 16px;
+    }
+
+    .decision-board__title{
+        letter-spacing: -0.18px;
+    }
+
+    .decision-board{
+        padding: 16px;
+    }
+
+    .decision-board-table-wrapper{
+        overflow-x: auto;
+        transform: rotateX(180deg);
+        padding:1px 1px 24px;
+    }
+    .decision-board-table-wrapper .decision-board__table {
+        transform: rotateX(180deg);
+    }
+    .decision-board-table-wrapper::-webkit-scrollbar {
+        width: 8px;
+    }
+    .decision-board-table-wrapper::-webkit-scrollbar-thumb {
+        border-radius: 100px;
+        background: var(--color-primary);
+    }
+    .decision-board-table-wrapper::-webkit-scrollbar-track {
+        border-radius: 100px;
+        background: var(--color-light_gray-22);
+    }
+    .decision-board__table td{
+        padding: 4px;
+        min-width: 68px;
+    }
+    .decision-board__table tr td:last-child{
+        min-width: 90px;
     }
     /*END home*/
 
@@ -470,7 +506,6 @@
     .service-section__bottom{
         margin-top: 12px;
     }
-
     /*END service page*/
 
     /*about page*/
@@ -478,10 +513,12 @@
         grid-template-columns: 100%;
         gap: 12px;
     }
+
     .about-top__item{
         padding: 16px;
         gap: 12px;
     }
+
     .about-top__image-wrapper{
         min-height: 291px;
         background-position: center;
@@ -491,11 +528,13 @@
     .process-item__number{
         width: 42px;
         min-width: 42px;
+        margin-right: 0;
     }
 
     .about-top__image{
         background-size: 80%;
     }
+
     .promo-block{
         padding: 16px 16px 32px;
         flex-direction: column;
@@ -503,6 +542,72 @@
         background-image: url("/assets/images/banners/bg-image-4-mob.webp");
     }
     /*END about page*/
+
+    /*partners page*/
+    .partners-top-section__wrapper{
+        margin-top: 32px;
+    }
+    .partners-top__description{
+        margin-top: 12px;
+    }
+
+    .partners-top-section{
+        padding: 16px;
+    }
+
+    .partners-top-section{
+        background-image: url("/assets/images/banners/bg-image-5-mob.webp");
+    }
+    /*END partners page*/
+
+    /*blog page*/
+
+    .blog-content{
+        grid-template-columns: 100%;
+        gap: 12px;
+    }
+
+    .panes-wrapper{
+        overflow-x: auto;
+        width: calc(100% + 20px);
+        margin-left: -10px;
+        padding: 0 10px;
+    }
+
+    .panes-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .blog-card{
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .panes-wrapper {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .blog-card__reading-time svg path{
+        fill: var(--color-primary-light);
+        fill-opacity:1;
+    }
+
+    .blog-card__text{
+        font-weight: 500;
+    }
+
+
+
+
+
+    /*END blog page*/
+
+
+
+
+
+
 
     /*error page*/
     .error-page-section {
@@ -529,8 +634,6 @@
         margin-top: 16px;
     }
     /*END confidentiality page*/
-
-
 
     /*footer*/
     .footer {
@@ -562,9 +665,7 @@
     }
 }
 
-
 @media (max-width: 480px) {
-
 
 
 }

@@ -80,10 +80,12 @@
     --font-size-26-18: 26px;
     --font-size-24-18: 24px;
     --font-size-24-16: 24px;
+    --font-size-24-12: 24px;
     --font-size-20-16: 20px;
     --font-size-16-14: 16px;
     --font-size-16-12: 16px;
     --font-size-16-10: 16px;
+    --font-size-16-8: 16px;
     --font-size-12-10: 12px;
     --font-size-10-8: 10px;
 
@@ -100,9 +102,11 @@
         --font-size-28-18: 18px;
         --font-size-24-18: 18px;
         --font-size-24-16: 16px;
+        --font-size-24-12: 12px;
         --font-size-20-16: 16px;
         --font-size-16-14: 14px;
         --font-size-16-12: 12px;
+        --font-size-16-8: 8px;
         --font-size-16-10: 10px;
         --font-size-12-10: 10px;
         --font-size-10-8: 8px;
@@ -137,6 +141,10 @@ h2,
     line-height: 100%;
     letter-spacing: -0.32px;
     color: var(--color-white);
+}
+
+.h2.color-black{
+    color: var(--color-black);
 }
 
 h4,
