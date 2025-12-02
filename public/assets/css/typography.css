@@ -154,6 +154,14 @@ h4,
     letter-spacing: -0.2px;
 }
 
+h3,
+.h3{
+    font-size: var(--font-size-24-18);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.24px;
+}
+
 .text-m{
     font-size: var(--font-size-16-14);
     line-height: 130%
