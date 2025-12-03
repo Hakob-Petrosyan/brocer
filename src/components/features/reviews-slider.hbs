@@ -37,18 +37,17 @@
          data-pagination-type-tablet="false"
          data-pagination-type-mobile="progressbar"
     >
-
         <div class="swiper-wrapper">
-            <div class="swiper-slide reviews-card flexColumn bg__white borderRadius-24-16">
+            <div class="swiper-slide reviews-card flexColumn bg__white borderRadius-24-16" data-reviews-card>
                 <div class="reviews-card__top  flexJustifyBetween">
                     <div class="reviews-creator flexAlignCenter">
                         <div class="reviews-creator__image">
-                            <img src="/assets/images/card-icons/creator_1.webp" alt="creator">
+                            <img src="/assets/images/card-icons/creator_1.webp" alt="creator" data-reviews-creator-img="/assets/images/card-icons/creator_1.webp">
                         </div>
 
                         <div class="reviews-creator__info flexColumn">
-                            <span class="reviews-creator__data">05.12.2024</span>
-                            <span class="reviews-creator__name">Андрей Львович</span>
+                            <span class="reviews-creator__data" data-reviews-creator-data>05.12.2024</span>
+                            <span class="reviews-creator__name" data-reviews-creator-name>Андрей Львович</span>
                             <div class="reviews-rating flexAlignCenter">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"
                                      fill="none">
@@ -77,13 +76,17 @@
                                 </svg>
                             </div>
                         </div>
-
                     </div>
-                    <div class="reviews-from-site">
+                    <div class="reviews-from-site" data-reviews-site>
                         <img src="/assets/images/card-icons/yandex-img-1.webp" alt="">
                     </div>
                 </div>
-                <div class="reviews-card__content color__gray">
+                <div class="reviews-card__content color__gray" data-reviews-content>
+                    Недавно я воспользовался услугами кредитного
+                    брокера и остался очень доволен. После подачи заявки,
+                    менеджеры быстро связались со мной, всего через 10 минут.
+                    Они профессионально ответили на все мои вопросы и помогли
+                    выбрать лучший вариант кредита. Рекомендую!
                     Недавно я воспользовался услугами кредитного
                     брокера и остался очень доволен. После подачи заявки,
                     менеджеры быстро связались со мной, всего через 10 минут.
@@ -91,10 +94,10 @@
                     выбрать лучший вариант кредита. Рекомендую!
                 </div>
                 <div class="reviews-card__bottom">
-                    <a href="" class="show-full-review-btn flexCenter">Показать полностью</a>
+                    <button class="show-full-review-btn flexCenter" data-reviews-toggle-full data-open-popup="reviews-popup">Показать полностью</button>
                 </div>
             </div>
-            <div class="swiper-slide reviews-card flexColumn bg__white borderRadius-24-16">
+            <div class="swiper-slide reviews-card flexColumn bg__white borderRadius-24-16" data-reviews-card>
                 <div class="reviews-card__top  flexJustifyBetween">
                     <div class="reviews-creator flexAlignCenter">
                         <div class="reviews-creator__image">
@@ -134,19 +137,17 @@
                         </div>
 
                     </div>
-                    <div class="reviews-from-site">
-
-                    </div>
+                    <div class="reviews-from-site"></div>
                 </div>
-                <div class="reviews-card__content color__gray">
+                <div class="reviews-card__content color__gray" data-reviews-content>
                     Недавно я воспользовался услугами кредитного
                     брокера и остался очень доволен. После подачи заявки,
                 </div>
                 <div class="reviews-card__bottom">
-                    <a href="" class="show-full-review-btn flexCenter">Показать полностью</a>
+                    <button class="show-full-review-btn flexCenter" data-reviews-toggle-full>Показать полностью</button>
                 </div>
             </div>
-            <div class="swiper-slide reviews-card flexColumn bg__white borderRadius-24-16">
+            <div class="swiper-slide reviews-card flexColumn bg__white borderRadius-24-16" data-reviews-card>
                 <div class="reviews-card__top  flexJustifyBetween">
                     <div class="reviews-creator flexAlignCenter">
                         <div class="reviews-creator__image">
@@ -190,23 +191,22 @@
                         <img src="/assets/images/card-icons/yandex-img-1.webp" alt="">
                     </div>
                 </div>
-                <div class="reviews-card__content color__gray">
+                <div class="reviews-card__content color__gray" data-reviews-content>
                     Обратилась к кредитному брокеру по рекомендации друга.
                     Сразу же после подачи заявки мне позвонили и рассказали
                     о различных кредитных предложениях. Особенно понравилась
                     скорость и прозрачность процесса. Спасибо!
                 </div>
                 <div class="reviews-card__bottom">
-                    <a href="" class="show-full-review-btn flexCenter">Показать полностью</a>
+                    <button class="show-full-review-btn flexCenter" data-reviews-toggle-full>Показать полностью</button>
                 </div>
             </div>
-            <div class="swiper-slide reviews-card flexColumn bg__white borderRadius-24-16">
+            <div class="swiper-slide reviews-card flexColumn bg__white borderRadius-24-16" data-reviews-card>
                 <div class="reviews-card__top  flexJustifyBetween">
                     <div class="reviews-creator flexAlignCenter">
                         <div class="reviews-creator__image">
                             <img src="/assets/images/card-icons/creator_1.webp" alt="creator">
                         </div>
-
                         <div class="reviews-creator__info flexColumn">
                             <span class="reviews-creator__data">05.12.2024</span>
                             <span class="reviews-creator__name">Андрей Львович</span>
@@ -238,13 +238,12 @@
                                 </svg>
                             </div>
                         </div>
-
                     </div>
                     <div class="reviews-from-site">
                         <img src="/assets/images/card-icons/yandex-img-1.webp" alt="">
                     </div>
                 </div>
-                <div class="reviews-card__content color__gray">
+                <div class="reviews-card__content color__gray" data-reviews-content>
                     Обратилась к кредитному брокеру по рекомендации друга.
                     Сразу же после подачи заявки мне позвонили и рассказали
                     о различных кредитных предложениях. Особенно понравилась
@@ -255,7 +254,7 @@
                     скорость и прозрачность процесса. Спасибо!
                 </div>
                 <div class="reviews-card__bottom">
-                    <a href="" class="show-full-review-btn flexCenter">Показать полностью</a>
+                    <button class="show-full-review-btn flexCenter" data-reviews-toggle-full>Показать полностью</button>
                 </div>
             </div>
         </div>

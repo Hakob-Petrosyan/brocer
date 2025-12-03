@@ -80,8 +80,10 @@ function resetScrollBody() {
     document.body.classList.remove('popup-open');
 }
 function closePopUp(){
-    const popup = document.querySelector('[data-popup]');
-    popup.classList.remove('active');
+    const popups = document.querySelectorAll('[data-popup]');
+    popups.forEach(popup => {
+        popup.classList.remove('active');
+    })
     resetScrollBody()
 }
 function openPopUp() {
@@ -91,8 +93,17 @@ function openPopUp() {
             const popupType = openBtn.dataset.openPopup;
             const currentPopUp = document.getElementById(`${popupType}`)
             currentPopUp.classList.add('active');
-            currentPopUp.querySelector('[data-popup-get-title]').innerText = openBtn.dataset.popupSetTitle;
-            currentPopUp.querySelector('[data-popup-get-button-text]').innerText = openBtn.dataset.popupSetTitle;
+
+
+            const popupGetTitle = currentPopUp.querySelector('[data-popup-get-title]');
+            const popupGetButtonText = currentPopUp.querySelector('[data-popup-get-button-text]');
+
+            if (popupGetTitle){
+                popupGetTitle.innerText = openBtn.dataset.popupSetTitle;
+                popupGetButtonText.innerText = openBtn.dataset.popupSetTitle;
+            }
+
+
             stopScrollBody()
         });
     })
@@ -121,13 +132,36 @@ function closeByOverlay() {
         }
     });
 }
-
 function initFancybox(){
     Fancybox.bind("[data-fancybox='certificates-gallery']", {
         Thumbs: {
             autoStart: true,
         },
     });
+}
+function showFullReviewsButton(){
+    const reviewsCards = document.querySelectorAll('[data-reviews-card]');
+    reviewsCards.forEach(reviewsCard => {
+        const reviewsContent = reviewsCard.querySelector('[data-reviews-content]')
+        const reviewsToggleFull = reviewsCard.querySelector('[data-reviews-toggle-full]')
+
+        if (reviewsContent.scrollHeight < 150){
+            reviewsToggleFull.classList.add('hide');
+            console.log(reviewsToggleFull)
+        }
+
+    })
+}
+function initFullReviews(){
+    const fullReviewsButtons = document.querySelectorAll('[data-reviews-toggle-full]');
+    fullReviewsButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const reviewsCard = button.closest('[data-reviews-card]');
+            const reviewsCreatorImg =  reviewsCard.querySelector('[data-reviews-creator-img]').dataset.reviewsCreatorImg;
+            console.log(reviewsCreatorImg)
+            stopScrollBody()
+        })
+    })
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -138,6 +172,8 @@ document.addEventListener('DOMContentLoaded', function() {
     closeByESC()
     closeByOverlay()
     initFancybox()
+    showFullReviewsButton()
+    initFullReviews()
 })
 
 function initSliders() {
