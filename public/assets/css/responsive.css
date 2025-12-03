@@ -735,4 +735,10 @@
     .mb-hide {
         display: none;
     }
+
+
+    .popup-content{
+        padding: 16px;
+        gap: 24px;
+    }
 }

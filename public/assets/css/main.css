@@ -292,6 +292,9 @@
     aspect-ratio: 224/318;
     background-color: var(--color-light_gray-25);
 }
+.certificates-card a{
+    width: 100%;
+}
 
 .certificates-card img {
     height: 100%;
@@ -1397,6 +1400,114 @@
     display: none;
 }
 /*END footer*/
+
+
+/*pop up*/
+body.popup-open {
+    overflow: hidden;
+    padding-right: 15px;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--popup-bg);
+    display: none;
+    z-index: 99;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    max-width:387px;
+    max-height: 95vh;
+    overflow-y: auto;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: none;
+    padding: 0 10px;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup__top{
+    gap: 12px;
+}
+
+.popup-content {
+    padding: 32px;
+    gap: 32px;
+}
+
+.popup-close {
+    height: 24px;
+    width: 24px;
+}
+
+
+.popup::-webkit-scrollbar {
+    width: 4px;
+}
+.popup::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: var(--color-smoke);
+}
+.popup::-webkit-scrollbar-track {
+    background: transparent;
+}
+.popup::-webkit-scrollbar-button {
+    display: none;
+}
+@supports (-moz-appearance: none) {
+    .cities-list {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-smoke) transparent;
+    }
+}
+
+
+
+
+.popup__send-btn{
+    width: 100%;
+    padding: 0 65px;
+    max-width: fit-content;
+}
+
+
+/*END pop up*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (hover: hover) {
     .reviews-card:hover .show-full-review-btn {

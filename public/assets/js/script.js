@@ -68,10 +68,76 @@ function openCloseBlock() {
     })
 }
 
+function stopScrollBody() {
+    const popupOverlay = document.getElementById('popupOverlay');
+    document.body.classList.add('popup-open');
+    popupOverlay.classList.add('active');
+    popupOverlay.focus();
+}
+function resetScrollBody() {
+    const popupOverlay = document.getElementById('popupOverlay');
+    popupOverlay.classList.remove('active');
+    document.body.classList.remove('popup-open');
+}
+function closePopUp(){
+    const popup = document.querySelector('[data-popup]');
+    popup.classList.remove('active');
+    resetScrollBody()
+}
+function openPopUp() {
+    const openPopupButtons = document.querySelectorAll('[data-open-popup]');
+    openPopupButtons.forEach(openBtn => {
+        openBtn.addEventListener('click', () => {
+            const popupType = openBtn.dataset.openPopup;
+            const currentPopUp = document.getElementById(`${popupType}`)
+            currentPopUp.classList.add('active');
+            currentPopUp.querySelector('[data-popup-get-title]').innerText = openBtn.dataset.popupSetTitle;
+            currentPopUp.querySelector('[data-popup-get-button-text]').innerText = openBtn.dataset.popupSetTitle;
+            stopScrollBody()
+        });
+    })
+
+    const closePopupBtn = document.querySelectorAll('[data-close-popup]');
+    closePopupBtn.forEach(closeBtn => {
+        closeBtn.addEventListener('click', (e) => {
+            const popup = e.target.closest('[data-popup]');
+            popup.classList.remove('active');
+            resetScrollBody()
+        })
+    })
+}
+function closeByESC() {
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape'){
+            closePopUp()
+        }
+    });
+}
+function closeByOverlay() {
+    const popupOverlay = document.getElementById('popupOverlay');
+    popupOverlay?.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+            closePopUp()
+        }
+    });
+}
+
+function initFancybox(){
+    Fancybox.bind("[data-fancybox='certificates-gallery']", {
+        Thumbs: {
+            autoStart: true,
+        },
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     initVideo()
     initTabs()
     openCloseBlock()
+    openPopUp()
+    closeByESC()
+    closeByOverlay()
+    initFancybox()
 })
 
 function initSliders() {
