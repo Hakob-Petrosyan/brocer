@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-white:#FFFFFF;
+
+    --color-black-darck: #000000;
+    --color-black: #1c1c1c;
+
+    --color-gray-darck: #34404c;
+    --color-gray: #696969;
+    --color-gray-20: #767676;
+    --color-gray-25: #757575;
+    --color-gray-26: #77887a;
+    --color-gray-30: #878684;
+    --color-gray-35: #8D8D8D;
+    --color-gray-36: #8c8c8c;
+    --color-light_gray: #adaeae;
+    --color-light_gray-10: #AEAFAF;
+    --color-light_gray-11: #b3b3b3;
+    --color-light_gray-12: #b4b4b4;
+    --color-light_gray-13: #B9B9B9;
+    --color-light_gray-15: #CDD1D4;
+    --color-light_gray-16: #CCD1D4;
+    --color-light_gray-20: #F3F5F6;
+    --color-light_gray-21: #F2F5F6;
+    --color-light_gray-22: #F6F6F6;
+    --color-light_gray-25: #f1f1f1;
+    --color-gray-40: #ccd0d3;
+
+    --color-primary-5: #000000;
+    --color-primary: #F52933;
+    --color-primary-light: #FE4952;
+
+    --color-blue-dark: #081d32;
+    --color-blue-10: #0f2438;
+    --color-blue: #2c81d7;
+    --color-blue-20: #2C82D8;
+    --color-blue-light: #f0f3f4;
+    --color-blue-light-20: #E2F7FF;
+    --color-blue-light-25: #f1f3f4;
+
+    --color-status-approved:#F4F1CD;
+    --color-status-progress: #d3d9fa;
+    --color-status-new: #d3faea;
+
+    --color-green: #60d569;
+
+    --popup-bg: rgba(52, 64, 76, 0.60);
+
+}
+
+
+.color-black{
+    color: var(--color-black);
+}
+.color__white{
+    color: var(--color-white);
+}
+
+.color__gray{
+    color: var(--color-gray);
+}
+.color__gray-30{
+    color: var(--color-gray-30);
+}
+
+.color-gray-35{
+    color: var(--color-gray-35);
+}
+
+.color-blue-20{
+    color: var(--color-blue-20);
+}
+
+.color-gray-36{
+    color: var(--color-gray-36);
+}
+
+.color-light_gray-12{
+    color: var(--color-light_gray-12);
+}
+.color-primary{
+    color: var(--color-primary);
+}
+
+
+
+
+
+.bg__white{
+    background-color: var(--color-white);
+}
+.bg__blue-dark{
+    background-color: var(--color-blue-dark)
+}
+.bg__blue-10{
+    background-color: var(--color-blue-10);
+}
+.bg__color-primary-light{
+    background-color: var(--color-primary-light);
+}
+
+
+.width-container{
+    width: 100%;
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+body {
+    color: var(--color-black);
+    background-color: var(--color-gray-darck);
+    font-family: 'Inter Tight';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.page-section {
+    margin-top: 120px;
+}
+
+.home__page-section{
+    margin-top: 80px;
+}
+
+
+
+a {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+    color: var(--color-white);
+    transition: color 300ms, background-color 300ms;
+    white-space: nowrap;
+}
+
+.btn-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    height: 56px;
+    border-radius: 12px;
+    padding: 0 32px;
+}
+
+.btn-dark{
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    border-radius: 12px;
+    transition: color 300ms, border-color 300ms, background-color 300ms;
+}
+
+.btn-dark svg path{
+    transition: fill 300ms;
+}
+
+.btn-dark svg path{
+    transition: stroke 300ms;
+}
+
+
+.btn__red{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+
+img {
+    width: 100%;
+}
+
+.imgWrapper img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.resetListStyle {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.textUppercase {
+    text-transform: uppercase;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mw-fitContent {
+    display: flex;
+    max-width: fit-content;
+}
+
+.blockBox{
+    display: block;
+}
+
+.flexBox {
+    display: flex;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexAlignCenter {
+    display: flex;
+    align-items: center;
+}
+
+.flex__row__column {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexJustifyBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+::placeholder {
+    color: var(--color-light_gray-10);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: var(--color-light_gray-10);
+}
+
+::-ms-input-placeholder {
+    color: var(--color-light_gray-10);
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.positionRelative{
+    position: relative;
+}
+
+.positionAbsolute{
+    position: absolute;
+}
+
+[data-container]{
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+}
+
+[data-container].active{
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+.overflowHidden{
+    overflow: hidden;
+}
+
+.borderRadius-24-16{
+    border-radius: 24px;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.whiteBtnHover{
+    transition: background-color 300ms, color 300ms, border-bottom-color 300ms;
+}
+
+.whiteBtnHover svg path{
+    transition: fill 300ms;
+}
+
+
+@media (max-width: 992px) {
+    .btn-dark{
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        padding: 0 12px;
+    }
+
+    .home__page-section,
+    .page-section {
+        margin-top: 56px;
+    }
+
+    .flex__row__column {
+        flex-direction: column;
+    }
+
+    .btn-custom{
+        height: 38px;
+        padding: 0 16px;
+    }
+
+    .borderRadius-24-16{
+        border-radius: 16px;
+    }
+
+
+}
+
+
+
+@media (hover: hover) {
+    button:hover {
+        cursor: pointer;
+    }
+
+    .btn__red:hover{
+        background-color: var(--color-primary-light);
+    }
+
+    .search-btn:hover,
+    .btn-dark-icon__hover:hover,
+    .btn-dark__hover:hover{
+        background-color: var(--color-white);
+        color: var(--color-primary-light);
+    }
+
+    .btn-dark-icon__hover:hover svg path{
+        fill: var(--color-primary-light);
+    }
+
+    .search-btn:hover svg path{
+        stroke: var(--color-primary-light);
+    }
+
+    .whiteBtnHover:hover{
+        background-color: var(--color-blue-20);
+        color: var(--color-white);
+    }
+
+    .whiteBtnHover:hover svg path{
+        fill: var(--color-white);
+    }
+
+}
+
