@@ -43,10 +43,6 @@
 }
 
 @media (max-width: 992px) {
-    .header-nav {
-        display: none;
-    }
-
     .header {
         padding: 10px;
         border-radius: 16px;
@@ -728,6 +724,52 @@
     }
 
     /*END footer*/
+
+    .open-mb-menu{
+        position: relative;
+        z-index: 100;
+    }
+    .mobile-menu{
+        padding: 16px;
+        border-radius: 12px;
+        position: absolute;
+        top: calc(100% + 8px);
+        max-width: 240px;
+        gap: 24px;
+    }
+    .mobile-menu .header-nav{
+        gap: 24px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .mb-show {
         display: flex;
     }

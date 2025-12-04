@@ -1,4 +1,4 @@
-<header class="width-container">
+<header class="width-container open-mb-menu">
     <div class="header bg__blue-dark flexBox">
         <button class="mobile-menu-btn mb-show btn-header btn-dark flexCenter">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
@@ -10,7 +10,7 @@
             <img src="/assets/images/logos/brand-logo.webp" alt="brand-logo">
         </a>
 
-        <nav class="header-nav color__white flexAlignCenter fontWeight600">
+        <nav class="header-nav color__white flexAlignCenter fontWeight600 mb-hide">
             <ul class="header-nav__list-special  resetListStyle flexAlignCenter">
                 <li>
                     <a href="" class="header-list-special-item bg__blue-10 flexAlignCenter">Частным лицам</a>
@@ -54,7 +54,37 @@
                 </svg>
             </button>
 
-            <button class="btn-header btn-dark fontWeight500 mb-hide btn-dark__hover">Бесплатная консультация</button>
+            <button class="btn-header btn-dark fontWeight500 mb-hide btn-dark__hover" data-open-popup="request-popup" data-popup-set-title="Получить консультацию">Бесплатная консультация</button>
         </div>
     </div>
+
+    <div class="mobile-menu bg__blue-dark w-100 flexColumn">
+        <nav class="header-nav color__white flexColumn fontWeight600">
+            <ul class="header-nav__list-special  resetListStyle flexColumn">
+                <li>
+                    <a href="" class="header-list-special-item bg__blue-10 flexAlignCenter">Частным лицам</a>
+                </li>
+                <li>
+                    <a href="" class="header-list-special-item bg__blue-10 flexAlignCenter">Компаниям</a>
+                </li>
+            </ul>
+            <ul class="header-nav__list-main resetListStyle flexColumn">
+                <li>
+                    <a href="">Калькулятор</a>
+                </li>
+                <li>
+                    <a href="">О компании</a>
+                </li>
+                <li>
+                    <a href="">Блог</a>
+                </li>
+                <li>
+                    <a href="">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="btn-header btn-dark fontWeight500 btn-dark__hover text-l">Бесплатная консультация</button>
+    </div>
 </header>
+

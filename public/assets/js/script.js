@@ -213,6 +213,88 @@ function initFullReviews(){
         })
     })
 }
+function inputRanger(){
+    const rangeWrappers = document.querySelectorAll('[data-range-wrapper]');
+
+    function updateRangeProgress(range, rangeProgress) {
+        const value = range.value;
+        const min = parseInt(range.min);
+        const max = parseInt(range.max);
+        const percentage = ((value - min) / (max - min)) * 100;
+
+        rangeProgress.style.width = percentage + "%";
+    }
+
+    rangeWrappers?.forEach(rangeWrapper => {
+        const input = rangeWrapper.querySelector('[data-range-value]');
+        const range = rangeWrapper.querySelector('[data-range-track]');
+        const minVal = parseInt(range.min);
+        const maxVal = parseInt(range.max);
+
+        const rangeProgress = document.createElement('span');
+        rangeProgress.className = 'range-progress';
+        range.parentElement.appendChild(rangeProgress);
+
+        updateRangeProgress(range, rangeProgress);
+
+        range.addEventListener('input', () => {
+            input.value = String(range.value);
+            updateRangeProgress(range, rangeProgress);
+        });
+
+        input.addEventListener('input', () => {
+            let digits = input.value;
+            let num = parseInt(digits);
+            if (isNaN(num)) num = minVal;
+            if (num < minVal) num = minVal;
+            if (num > maxVal) num = maxVal;
+
+            input.value = String(num);
+            range.value = num;
+            updateRangeProgress(range, rangeProgress);
+        });
+    });
+}
+function backwardsTime() {
+    const buttons = document.querySelectorAll('[data-backwards-time-buttons]');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const wrapper = button.closest('[data-backwards-time-wrapper]');
+            const display = wrapper.querySelector('[data-backwards-time-value]');
+
+            if (!display) return;
+
+            const [m, s] = display.textContent.split(':').map(Number);
+
+            let totalSeconds = m * 60 + s;
+
+            if (totalSeconds <= 1) return;
+
+            clearInterval(display._timerId);
+
+            display._timerId = setInterval(() => {
+                totalSeconds--;
+
+                if (totalSeconds <= 1) {
+                    totalSeconds = 1;
+                    clearInterval(display._timerId);
+                }
+
+                const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
+                const seconds = (totalSeconds % 60).toString().padStart(2, '0');
+
+                display.textContent = `${minutes}:${seconds}`;
+            }, 1000);
+        });
+    });
+}
+
+
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     initVideo()
@@ -224,6 +306,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initFancybox()
     showFullReviewsButton()
     initFullReviews()
+    inputRanger()
+    backwardsTime()
 })
 
 function initSliders() {
@@ -332,6 +416,10 @@ document.addEventListener('focus', function (e) {
         }
     }
 }, true);
+
+
+
+
 
 
 
