@@ -424,6 +424,22 @@
     gap: 6px;
 }
 
+.stars-1 svg:nth-child(n + 2) path {
+    fill: var(--color-light_gray-11)
+}
+
+.stars-2 svg:nth-child(n + 3) path {
+    fill: var(--color-light_gray-11)
+}
+
+.stars-3 svg:nth-child(n + 4) path {
+    fill: var(--color-light_gray-11)
+}
+
+.stars-4 svg:nth-child(n + 5) path {
+    fill: var(--color-light_gray-11)
+}
+
 .reviews-from-site {
     width: 40px;
     height: 40px;

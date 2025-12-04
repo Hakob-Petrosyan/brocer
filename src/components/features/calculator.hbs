@@ -5,7 +5,7 @@
             <div class="form__inputs flexColumn calculator-content-col">
                 <label class="form__label flexColumn">
                     <span class="form__input-title color__gray text_S">Сумма кредита</span>
-                    <input type="number" class="form__input text-l" placeholder="100 000 ₽">
+                    <input type="number" name="price" class="form__input text-l" placeholder="100 000 ₽">
                     <span class="form__input-title flexJustifyBetween color-light_gray-12 text_S">
                                 <span>от 1 ₽</span>
                                 <span>до 30 млн. ₽</span>
@@ -13,7 +13,7 @@
                 </label>
                 <label class="form__label flexColumn">
                     <span class="form__input-title color__gray text_S">Ставка</span>
-                    <input type="number" class="form__input text-l" placeholder="Цель кредита">
+                    <input type="number" name="purpose" class="form__input text-l" placeholder="Цель кредита">
                     <span class="form__input-title flexJustifyBetween color-light_gray-12 text_S">
                                 <span>от 1 %</span>
                                 <span>до 120 %</span>
@@ -27,7 +27,7 @@
                     <div data-container="" class="active">
                         <label class="form__label flexColumn">
                             <span class="form__input-title color__gray text_S">Срок кредитования</span>
-                            <input type="number" class="form__input text-l" placeholder="12">
+                            <input type="number" name="loan-term" class="form__input text-l" placeholder="12">
                             <span class="form__input-title flexJustifyBetween color-light_gray-12 text_S">
                                 <span>от 1 года</span>
                                 <span>до 30 лет</span>
@@ -37,7 +37,7 @@
                     <div data-container="">
                         <label class="form__label flexColumn">
                             <span class="form__input-title color__gray text_S">Срок кредитования</span>
-                            <input type="number" class="form__input text-l" placeholder="6">
+                            <input type="number" name="loan-term" class="form__input text-l" placeholder="6">
                             <span class="form__input-title flexJustifyBetween color-light_gray-12 text_S">
                                 <span>от 1 Месяц</span>
                                 <span>до 30 Месяц</span>
@@ -91,11 +91,11 @@
                 <div class="form__inputs flexColumn">
                     <label class="form__label flexColumn">
                         <span class="form__input-title color__gray text_S">Имя</span>
-                        <input type="text" class="form__input text-l" placeholder="Имя">
+                        <input type="text" name="name" class="form__input text-l" placeholder="Имя" required>
                     </label>
                     <label class="form__label flexColumn">
                         <span class="form__input-title color__gray text_S">Телефон</span>
-                        <input type="tel" class="form__input text-l" placeholder="Телефон">
+                        <input type="tel" name="phone" class="form__input text-l" placeholder="Телефон" data-phone-mask>
                     </label>
                 </div>
 

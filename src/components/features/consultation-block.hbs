@@ -15,7 +15,7 @@
             <div class="consultation-col form__inputs flexColumn">
                 <label class="form__label flexColumn">
                     <span class="form__input-title color__gray text_S">Сумма кредита</span>
-                    <input type="number" class="form__input text-l" placeholder="100 000 ₽">
+                    <input type="number" name="price" class="form__input text-l" placeholder="100 000 ₽">
                     <span class="form__input-title flexJustifyBetween color-light_gray-12 text_S">
                             <span>от 1 ₽</span>
                             <span>до 30 млн. ₽</span>
@@ -30,7 +30,7 @@
                     <div data-container>
                         <label class="form__label flexColumn">
                             <span class="form__input-title color__gray text_S">Срок кредитования</span>
-                            <input type="number" class="form__input text-l" placeholder="12">
+                            <input type="number" name="loan-term" class="form__input text-l" placeholder="12">
                             <span class="form__input-title flexJustifyBetween color-light_gray-12 text_S">
                             <span>от 1 года</span>
                             <span>до 30 лет</span>
@@ -40,7 +40,7 @@
                     <div data-container>
                         <label class="form__label flexColumn">
                             <span class="form__input-title color__gray text_S">Срок кредитования</span>
-                            <input type="number" class="form__input text-l" placeholder="6">
+                            <input type="number" name="loan-term" class="form__input text-l" placeholder="6">
                             <span class="form__input-title flexJustifyBetween color-light_gray-12 text_S">
                             <span>от 1 Месяц</span>
                             <span>до 30 Месяц</span>
@@ -51,24 +51,24 @@
 
                 <label class="form__label flexColumn">
                     <span class="form__input-title color__gray text_S">Цель кредита</span>
-                    <input type="number" class="form__input text-l" placeholder="Цель кредита">
+                    <input type="text" name="purpose-loan" class="form__input text-l" placeholder="Цель кредита">
                 </label>
             </div>
             <div class="consultation-col flexColumn">
                 <div class="form__inputs flexColumn">
                     <label class="form__label flexColumn">
                         <span class="form__input-title color__gray text_S">Сумма кредита</span>
-                        <input type="number" class="form__input text-l" placeholder="100 000 ₽">
+                        <input type="number" name="loan-amount" class="form__input text-l" placeholder="100 000 ₽">
                     </label>
 
                     <label class="form__label flexColumn">
                         <span class="form__input-title color__gray text_S">Сумма кредита</span>
-                        <input type="number" class="form__input text-l" placeholder="100 000 ₽">
+                        <input type="number" name="loan-amount" class="form__input text-l" placeholder="100 000 ₽">
                     </label>
                 </div>
 
                 <label class="form-agreement flexBox">
-                    <input type="checkbox" name="agreement&quot;" hidden="">
+                    <input type="checkbox" name="agreement" hidden="">
                     <span class="form-agreement__check flexCenter">
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8" fill="none">
                                 <path d="M1 2.77778L4.2 6.33333L9 1" stroke="white" stroke-linecap="round"></path>

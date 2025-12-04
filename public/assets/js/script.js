@@ -1,4 +1,3 @@
-
 function initVideo() {
     const video = document.querySelector("[data-play-video]");
     const playBtn = document.querySelector("[data-play-icon]");
@@ -67,7 +66,6 @@ function openCloseBlock() {
         })
     })
 }
-
 function stopScrollBody() {
     const popupOverlay = document.getElementById('popupOverlay');
     document.body.classList.add('popup-open');
@@ -84,6 +82,7 @@ function closePopUp(){
     popups.forEach(popup => {
         popup.classList.remove('active');
     })
+    resetPopupReviews()
     resetScrollBody()
 }
 function openPopUp() {
@@ -142,23 +141,74 @@ function initFancybox(){
 function showFullReviewsButton(){
     const reviewsCards = document.querySelectorAll('[data-reviews-card]');
     reviewsCards.forEach(reviewsCard => {
-        const reviewsContent = reviewsCard.querySelector('[data-reviews-content]')
+        const reviewsContent = reviewsCard.querySelector('[data-set-reviews-content]')
         const reviewsToggleFull = reviewsCard.querySelector('[data-reviews-toggle-full]')
 
         if (reviewsContent.scrollHeight < 150){
             reviewsToggleFull.classList.add('hide');
-            console.log(reviewsToggleFull)
         }
 
     })
+}
+function resetPopupReviews(){
+    const popUpReviewsCard = document.querySelector("[data-popUp-reviews-card]");
+
+    const creatorImgWrap = popUpReviewsCard.querySelector('[data-get-reviews-creator-img]');
+    if (creatorImgWrap) creatorImgWrap.innerHTML = '';
+
+    const reviewsSiteImage = popUpReviewsCard.querySelector('[data-get-reviews-site-image]');
+    if(reviewsSiteImage) reviewsSiteImage.innerHTML = '';
+
+    popUpReviewsCard.querySelector('[data-get-reviews-creator-data]').innerText = '';
+    popUpReviewsCard.querySelector('[data-get-reviews-creator-name]').innerText = '';
+
+    const ratingEl = popUpReviewsCard.querySelector('[data-get-reviews-rating]');
+    ratingEl.className = ratingEl.className.replace(/stars-\d/, '');
+
+    popUpReviewsCard.querySelector('[data-get-reviews-content]').innerHTML = '';
+}
+function createImageReviews(wrapper, src, alt){
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+    wrapper.appendChild(img);
 }
 function initFullReviews(){
     const fullReviewsButtons = document.querySelectorAll('[data-reviews-toggle-full]');
     fullReviewsButtons.forEach(button => {
         button.addEventListener('click', () => {
+            resetPopupReviews()
+
             const reviewsCard = button.closest('[data-reviews-card]');
-            const reviewsCreatorImg =  reviewsCard.querySelector('[data-reviews-creator-img]').dataset.reviewsCreatorImg;
-            console.log(reviewsCreatorImg)
+            const setReviewsCreatorData =  reviewsCard.querySelector('[data-set-reviews-creator-data]').innerHTML;
+            const setReviewsCreatorName =  reviewsCard.querySelector('[data-set-reviews-creator-name]').innerHTML;
+            const setReviewsRating =  reviewsCard.querySelector('[data-set-reviews-rating]').dataset.setReviewsRating;
+            const setReviewsContent =  reviewsCard.querySelector('[data-set-reviews-content]').innerHTML;
+
+            const popUpReviewsCard = document.querySelector("[data-popUp-reviews-card]");
+            popUpReviewsCard.querySelector('[data-get-reviews-creator-data]').innerText = setReviewsCreatorData;
+            popUpReviewsCard.querySelector('[data-get-reviews-creator-name]').innerText = setReviewsCreatorName;
+            popUpReviewsCard.querySelector('[data-get-reviews-rating]').classList.add(setReviewsRating);
+            popUpReviewsCard.querySelector('[data-get-reviews-content]').innerHTML = setReviewsContent;
+
+            const reviewsCreatorImg =  reviewsCard.querySelector('[data-set-reviews-creator-img]');
+            if (reviewsCreatorImg){
+                createImageReviews(
+                    popUpReviewsCard.querySelector('[data-get-reviews-creator-img]'),
+                    reviewsCreatorImg.dataset.setReviewsCreatorImg,
+                    'Фото создателя'
+                )
+            }
+
+            const setReviewsSiteImage =  reviewsCard.querySelector('[data-set-reviews-site-image]');
+            if (reviewsCreatorImg){
+                createImageReviews(
+                    popUpReviewsCard.querySelector('[data-get-reviews-site-image]'),
+                    setReviewsSiteImage.dataset.setReviewsSiteImage,
+                    'фото стороннего сайта'
+                )
+            }
+
             stopScrollBody()
         })
     })
@@ -208,7 +258,6 @@ function initSliders() {
         const isReverseDirection = reverseDirection === 'true';
         const isPaginationClickable = paginationClickable === 'true';
 
-        // Определяем тип пагинации по брейкпоинтам
         const getPaginationType = () => {
             const width = window.innerWidth;
             if (width < 576) return paginationTypeMobile || paginationTypeTablet || paginationType || 'bullets';
@@ -218,10 +267,6 @@ function initSliders() {
 
         const paginationEl = `#swiper-pagination__${sliderGroupItem}`;
 
-
-
-
-        // Базовая конфигурация
         const swiperConfig = {
             grabCursor: isGrabCursor,
             loop: isSlidesLoop,
@@ -261,7 +306,6 @@ function initSliders() {
 
         const swiper = new Swiper(`#${sliderGroupItem}`, swiperConfig);
 
-        // При ресайзе обновляем тип пагинации под устройство
         window.addEventListener('resize', () => {
             const newType = getPaginationType();
             if (swiper.params.pagination.type !== newType) {
