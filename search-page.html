@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+{{> head
+title = 'Результат поиска'
+}}
+<body>
+
+{{> header }}
+
+
+<main class="flexColumn">
+    {{> breadcrumbs
+    currenPage = 'Результат поиска'
+    }}
+
+    <section class="search-page-content width-container flexColumn">
+        <form class="search-form w-100">
+            <label  class="search-form__label flexAlignCenter borderRadius-24-16 bg__blue-dark">
+                <input type="text" class="w-100 bg__blue-dark color__white" placeholder="факивунртеипамвс">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M14.0008 13.9998L11.1074 11.1064" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </label>
+        </form>
+
+        <div class="search-page__results service-content">
+            <div class="service-card flexColumn flexAlignCenter bg__white borderRadius-24-16">
+                <div class="service-card__top positionRelative w-100 flexCenter">
+                    <div class="service-card__tags positionAbsolute">
+                        <span class="service-card__tag text-l flexCenter">ХИТ</span>
+                    </div>
+
+                    <div class="service-card__image flexBox">
+                        <img src="/assets/images/card-icons/feature-img-4.webp" alt="">
+                    </div>
+                </div>
+
+                <div class="service-card__content flexColumn textCenter">
+                    <h4>Банковские гарантии</h4>
+                    <p class="service-card__description fontWeight600">Помощь в получении банковских
+                        гарантий 44-ФЗ</p>
+                    <span class="h4">от 100 000 ₽</span>
+                </div>
+                <a href="" class="service-card__btn btn__red btn-custom w-100 text-l">Узнать
+                    подробнее</a>
+            </div>
+            <div class="service-card flexColumn flexAlignCenter bg__white borderRadius-24-16">
+                <div class="service-card__top positionRelative w-100 flexCenter">
+                    <div class="service-card__tags positionAbsolute">
+                    </div>
+
+                    <div class="service-card__image flexBox">
+                        <img src="/assets/images/card-icons/feature-img-2.webp" alt="">
+                    </div>
+                </div>
+
+                <div class="service-card__content flexColumn textCenter">
+                    <h4>Банковские гарантии</h4>
+                    <p class="service-card__description fontWeight600">Помощь в получении банковских
+                        гарантий 44-ФЗ</p>
+                    <span class="h4">от 100 000 ₽</span>
+                </div>
+                <a href="" class="service-card__btn btn__red btn-custom w-100 text-l">Узнать
+                    подробнее</a>
+            </div>
+            <div class="service-card flexColumn flexAlignCenter bg__white borderRadius-24-16">
+                <div class="service-card__top positionRelative w-100 flexCenter">
+                    <div class="service-card__tags positionAbsolute">
+                    </div>
+
+                    <div class="service-card__image flexBox">
+                        <img src="/assets/images/card-icons/feature-img-1.webp" alt="">
+                    </div>
+                </div>
+
+                <div class="service-card__content flexColumn textCenter">
+                    <h4>Банковские гарантии</h4>
+                    <p class="service-card__description fontWeight600">Помощь в получении банковских
+                        гарантий 44-ФЗ</p>
+                    <span class="h4">от 100 000 ₽</span>
+                </div>
+                <a href="" class="service-card__btn btn__red btn-custom w-100 text-l">Узнать
+                    подробнее</a>
+            </div>
+        </div>
+
+        <div class="search-form-non-result flexCenter">
+                <span class="search-form-non-content text-m flexCenter w-100 bg__white borderRadius-24-16">Ничего не найдено</span>
+        </div>
+    </section>
+
+</main>
+
+{{> footer}}
+
+
+{{> popUps}}
+
+{{> scripts}}
+</body>
+</html>

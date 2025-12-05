@@ -66,7 +66,7 @@ function openCloseBlock() {
         })
     })
 }
-function stopScrollBody() {
+function stopScrollBody(mobileMenu) {
     const popupOverlay = document.getElementById('popupOverlay');
     document.body.classList.add('popup-open');
     popupOverlay.classList.add('active');
@@ -104,6 +104,7 @@ function openPopUp() {
 
 
             stopScrollBody()
+            closeAllMenu()
         });
     })
 
@@ -294,6 +295,52 @@ function backwardsTime() {
 
 
 
+function initMenu(menuOverlay, menu, button){
+    menu.classList.add('open');
+    menuOverlay.classList.add('active');
+    button.classList.add('active');
+}
+function closeByMenuOverlay() {
+    const menuOverlay = document.getElementById('menu-overlay');
+    menuOverlay?.addEventListener('click', (event) => {
+        if (event.target === menuOverlay) {
+            closeAllMenu();
+        }
+    });
+}
+function closeAllMenu() {
+    const allMenus = document.querySelectorAll('[data-close-menu]');
+    const menuButtons = document.querySelectorAll('[data-menu-button]');
+    const menuOverlay = document.getElementById('menu-overlay');
+
+    allMenus.forEach(menu => menu.classList.remove('open'));
+    menuButtons.forEach(button => button.classList.remove('active'));
+    menuOverlay?.classList.remove('active');
+}
+function handleMenuClick(){
+    const menuButtons = document.querySelectorAll('[data-menu-button]');
+    const menuOverlay = document.getElementById('menu-overlay');
+
+    if (menuButtons.length === 0) return;
+
+    menuButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const menuType = button.dataset.menuButton;
+            const menu = document.getElementById(menuType);
+            if (button.classList.contains('active')){
+                closeAllMenu()
+            }else{
+                closeAllMenu()
+                initMenu(menuOverlay, menu, button);
+            }
+        })
+    })
+}
+
+
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -308,6 +355,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initFullReviews()
     inputRanger()
     backwardsTime()
+    handleMenuClick()
+    closeByMenuOverlay()
 })
 
 function initSliders() {

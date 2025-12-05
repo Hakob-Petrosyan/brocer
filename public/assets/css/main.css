@@ -1,4 +1,8 @@
 /*header*/
+header{
+    z-index: 10;
+}
+
 .header {
     padding: 24px 48px;
     border-radius: 0 0 24px 24px;
@@ -1476,16 +1480,25 @@ body.popup-open {
     padding-right: 15px;
 }
 
-.popup-overlay.active {
-    display: flex;
-}
-
+.menu-overlay,
 .popup-overlay {
     position: fixed;
     inset: 0;
     background: var(--popup-bg);
     display: none;
+}
+
+.menu-overlay{
+    z-index: 9;
+}
+
+.popup-overlay{
     z-index: 99;
+}
+
+.popup-overlay.active,
+.menu-overlay.active{
+    display: flex;
 }
 
 .popup {
@@ -1630,10 +1643,126 @@ body.popup-open {
 }
 
 
+/*header menus*/
 
-.mobile-menu{
+.menu-item{
+    padding: 16px;
+    display: none;
+    border-radius: 12px;
+}
+.menu-item.open{
+    display: flex;
+}
+
+.contacts-menu{
+    left: 0;
+    top: calc(100% + 34px);
+    min-width: 251px;
+}
+
+.header-contacts{
+    gap: 12px;
+}
+
+.header-colling-btn.active,
+.search-btn.active{
+    background-color: var(--color-white);
+}
+
+.header-colling-btn.active svg path{
+    fill: var(--color-primary-light);
+}
+
+.search-btn.active svg path{
+    stroke:var(--color-primary-light);
+}
+
+.header-colling-btn .arrow-icon{
+    transform: scale(1, 1);
+    transition: transform 300ms;
+}
+
+.header-colling-btn.active .arrow-icon{
+    transform: scale(1, -1);
+}
+/*END header menus*/
+
+/*search*/
+.search-form__label{
+    padding: 16px 20px;
+    gap: 10px;
+}
+
+.search-page__results{
+    margin-top: 24px;
+}
+
+.search-form-non-result{
+    margin-top: 24px;
+    height: 100%;
+    flex: 1;
+}
+.search-form-non-content{
+    padding: 16px;
+    max-width: 437px;
+}
+
+.search-page-content{
+    flex: 1;
+}
+
+.search-menu{
+    right: 0;
+    top: calc(100% + 10px);
+    max-width: 437px;
     display: none;
 }
+.search-menu.open{
+    display: block;
+}
+.header-search__label{
+    border-radius: 12px;
+    padding: 16px 20px;
+    gap: 10px;
+}
+
+.search-result{
+    margin-top: 10px;
+    gap: 10px;
+}
+.search-result__content{
+    gap: 4px;
+}
+
+.search-result__item{
+    gap: 24px;
+    border-radius: 12px;
+    padding: 16px;
+}
+.search-result__image{
+    width: 56px;
+    height: 56px;
+}
+
+.search-result__title{
+
+}
+
+.search-result__text{
+    color: var(--color-light_gray-11);
+}
+
+/*END Search*/
+
+
+
+
+
+
+
+
+
+
 
 .hide {
     display: none;
