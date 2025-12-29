@@ -1756,6 +1756,25 @@ body.popup-open {
 
 
 
+.popup-result__close{
+    right: 32px;
+    top: 32px;
+}
+
+.popup-result-image{
+    width: 120px;
+    height: 120px;
+}
+
+.popup-result__content{
+    gap: 12px;
+}
+
+.popup-result__subtitle{
+    font-size: var(--font-size-16-12);
+    font-weight: 500;
+    line-height: 130%;
+}
 
 
 
