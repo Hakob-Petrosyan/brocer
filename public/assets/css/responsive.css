@@ -65,6 +65,10 @@
         gap: 4px;
     }
 
+    .header-colling-btn .arrow-icon path {
+        fill: var(--color-gray);
+    }
+
     /*breadcrumbs*/
     .breadcrumbs {
         gap: 12px;
